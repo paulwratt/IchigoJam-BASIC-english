@@ -9,26 +9,20 @@ See [IchigoJam.md](./IchigoJam.md) for more info about the armv6 LPC1114FN28 pro
 
 ## IchigoJam BASIC command list
 
-IchigoJam BASIC command reference (Japanese)
+IchigoJam BASIC command reference (from Japanese to English)
 
-IchigoJam BASIC instructions are listed.
+IchigoJam BASIC instructions are listed, some text may need studying to interpret properly.
 
-Download You can download file list with ZIP. 
-If you are using GitHub · Git, you may use Clone.
+You can download the file list as a ZIP. If you are using GitHub / Git, you may use Clone.
 
-When referring with RAW, when downloading a file again 
-The .txt file will be UTF-8 character code, CR + LF linefeed code. 
-(I changed the character code from May 14, 2016) 
-On Windows it is possible to use Notepad.
+When referring with RAW, when downloading a file again, The .txt file will be UTF-8 character code, CR + LF linefeed code (I changed the character code from May 14, 2016). On Windows it is possible to use Notepad.
 
-IchigoJam (Official) https://ichigojam.net/
-Strawberry Jam Recipe (Publisher) https://15jamrecipe.jimdo.com/
+* IchigoJam (Official) https://ichigojam.net/
+* Strawberry Jam Recipe (Publisher) https://15jamrecipe.jimdo.com/
 
 ## PDF version
 
-Mr. Masato Nishizawa made a PDF to the IchigoJam + PanCake command reference 
-It is open to the Facebook group IchigoJam-FAN. 
-If you want to list it on the page, please print this and use it.
+Mr. Masato Nishizawa made a PDF to the IchigoJam + PanCake command reference, It is open to the Facebook group IchigoJam-FAN. If you want to list it on the page, please print this and use it.
 
 https://www.facebook.com/groups/ichigojam/626631837476573/
 
