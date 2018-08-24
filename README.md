@@ -5,6 +5,9 @@ This repo is an English translation of the Japanese text available from [IchigoJ
 
 See [IchigoJam.md](./IchigoJam.md) for more info about the armv6 LPC1114FN28 project. The original README.md follows ...
 
+## IchigoJam BASIC RPi Pinouts
+<img src="https://ichigojam.github.io/RPi/image/pin.png" alt="IchigoJam BASIC RPi Pinouts" title="IchigoJam BASIC RPi Pinouts">
+
 ---
 
 ## IchigoJam BASIC command list
