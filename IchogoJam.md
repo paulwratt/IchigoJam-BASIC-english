@@ -13,8 +13,14 @@ https://ichigojam.net/
 #### Main IchigoJam Community Pages
 https://15jamrecipe.jimdo.com/
 
+#### IchicoJam BASIC (english)
+https://ichigojam.net/index-en.html
+
 #### IchicoJam BASIC for RPi
 https://ichigojam.github.io/RPi/
+
+#### IchigoJam BASIC English Quick Reference
+https://ichigojam.net/IchigoJam-en.html
 
 #### How to use MixJuice in IchigoJam BASIC
 https://15jamrecipe.jimdo.com/mixjuice/%E6%BA%96%E5%82%99-%E4%BD%BF%E3%81%84%E6%96%B9/
@@ -22,5 +28,3 @@ https://15jamrecipe.jimdo.com/mixjuice/%E6%BA%96%E5%82%99-%E4%BD%BF%E3%81%84%E6%
 #### How to use with IchigoLatte
 https://15jamrecipe.jimdo.com/mixjuice/%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84/
 
-#### IchigoJam BASIC English Quick Reference
-https://ichigojam.net/IchigoJam-en.html
