@@ -33,9 +33,9 @@ https://www.facebook.com/groups/ichigojam/626631837476573/
 
 There is also a version that Mr. Kazuhiro Oshium made MixJuice compatible from this list.
 
-https://www.facebook.com/groups/ichigojam/permalink/718904794915943/ 
-`? "MJ GET www.openspc2.org/data/m/ (command name in capital letter) .txt`
-For example? `"MJ GET www.openspc2.org/data/m/ABS.txt`
+https://www.facebook.com/groups/ichigojam/permalink/718904794915943/  
+`? "MJ GET www.openspc2.org/data/m/ (command name in capital letter) .txt`  
+For example? `"MJ GET www.openspc2.org/data/m/ABS.txt`  
 
 ## Notes on version notation
 
@@ -57,25 +57,25 @@ IchigoJam website reflects the latest beta version. It can be confirmed with `VE
 
 This document is "IchigoJam BASIC Reference" which is officially published in CC, And "IchigoJam BASIC RPi document", Based on information such as the Facebook group "IchigoJam-FAN" is writing on its own, by Keiichi Shiga (@fu-sen), and translated by Paul Wratt (@paulwratt).
 
-IchigoJam BASIC Reference: CC BY https://ichigojam.net/ 
-ver 1.2 
-https://ichigojam.net/IchigoJam-1.2.html 
-ver 1.1 
-https://ichigojam.net/IchigoJam-1.1.html 
-ver 1.0.1 
-https://ichigojam.net/IchigoJam-1.0.1.html 
-ver 0.9.9 
-https://ichigojam.net/IchigoJam-0.9.9.html 
-ver 0.9.7 (PDF) 
-https://ichigojam.net/IchigoJam-BASIC-reference.pdf
+IchigoJam BASIC Reference: CC BY https://ichigojam.net/  
+ver 1.2  
+https://ichigojam.net/IchigoJam-1.2.html  
+ver 1.1  
+https://ichigojam.net/IchigoJam-1.1.html  
+ver 1.0.1  
+https://ichigojam.net/IchigoJam-1.0.1.html  
+ver 0.9.9  
+https://ichigojam.net/IchigoJam-0.9.9.html  
+ver 0.9.7 (PDF)  
+https://ichigojam.net/IchigoJam-BASIC-reference.pdf 
 
-IchigoJam BASIC RPi document 
-https://ichigojam.github.io/RPi/index_en.html
+IchigoJam BASIC RPi document  
+https://ichigojam.github.io/RPi/index_en.html  
 
-Facebook group IchigoJam-FAN (Japanese) 
-https://www.facebook.com/groups/ichigojam/ 
-Facebook group IchigoJam - FAN @ en (English) 
-https://www.facebook.com/groups/ichigojamfan/
+Facebook group IchigoJam-FAN (Japanese)  
+https://www.facebook.com/groups/ichigojam/  
+Facebook group IchigoJam - FAN @ en (English)  
+https://www.facebook.com/groups/ichigojamfan/  
 
 Maded by Keiichi Shiga (Fu-sen.) | Keiichi SHIGA (BALLOON aka Fu-sen.), 2015-2018.
 
