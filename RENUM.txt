@@ -3,22 +3,22 @@ IchigoJam BASIC
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-プログラムの行番号を改めます。
+[Function]
+We change the line number of the program.
 
-[ コマンド 書式 ]
-RENUM [<開始行番号>]
-RENUM [<開始行番号>][,<増分>] (1.1 beta11～)
+[Command format]
+RENUM [<start line number>]
+RENUM [<start line number>] [, <increment>] (1.1 beta 11 ~)
 
-[ 例 ]
+[Example]
 RENUM
 RENUM 100
 
-[ 解説 ]
-RENUM を実行すると 10 ずつの行番号に改めます。
-<開始行番号> は 0.9.8 RC11 から使用できます。省略した場合は 10 からです。
-GOTO・GOSUB の行番号は変更されません。手動で変更する必要があります。
-0.9.8 RC6 からは行番号の変更が必要な行を表示します。
+[Commentary]
+When RENUM is executed, it changes to 10 line numbers.
+<start line number> can be used from 0.9.8 RC 11. If omitted, it is from 10.
+The line number of GOTO and GOSUB is not changed. It must be changed manually.
+0.9.8 From RC 6, lines that need to change line numbers are displayed.
 
-1.1 beta11 より <増分> が追加され、行番号の増分を設定できます。
-省略時は 10 です。また 1.1 beta10 までは 10 固定です。
+1.1 <increment> is added from beta11 and increment of line number can be set.
+The default is 10. Up to 1.1 beta 10 is fixed at 10.

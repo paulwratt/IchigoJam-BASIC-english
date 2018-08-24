@@ -1,28 +1,28 @@
 COPY
 IchigoJam BASIC 1.2.0～
 IchigoJam BASIC RPi
-IchigoJam PC 非対応
+IchigoJam PC not compatible
 -----------------------------------------------------------
-[ 機能 ]
-仮想メモリ領域の中身をコピーします。
+[Function]
+Copy the contents of the virtual memory area.
 
-[ コマンド 書式 ]
-COPY <領域先>,<領域元>,<転送数>
+[Command format]
+COPY <area destination>, <area source>, <number of transfers>
 
-[ 例 ]
+[Example]
 COPY #880,#800,5
 
-[ 解説 ]
-仮想メモリ領域の <転送元> から <転送先> へ
-<転送数> バイト転送を行います。
-<転送元>→<転送先>、<転送先>＋1→<転送先>＋1、……
-とコピーしていきます。
-例えば次の場合はイチゴマークを全画面埋めます。
+[Commentary]
+From <source> of virtual memory area to <destination>
+<Number of forwarding> Performs byte transfer.
+<Source> → <destination>, <destination> + 1 → <destination> + 1, ...
+I will copy it.
+For example, fill the full screen with the strawberry mark in the following cases.
 
-CLP:POKE #900,255:COPY #901,#900,767
+CLP: POKE #900,255: COPY #901,#900,767
 
-1.2 beta 21 より <転送数> はマイナスの値を使用できます。
-<転送数> をマイナスにした場合は末尾からコピーを行います。
-1.2 beta 23～ 以降 <領域元> <領域先> は領域の末尾を指定します。
-これはコピーの開始位置です。
-1.2 beta 21～22 は領域の頭を指定してましたが、変更されました。
+From 1.2 beta 21, you can use minus value for <transfer count>.
+If you set <transfer count> to minus, copy from the end.
+1.2 beta 23 or later <area source> <area destination> specifies the end of the area.
+This is the start position of the copy.
+1.2 beta 21 to 22 have specified the head of the area, but changed.

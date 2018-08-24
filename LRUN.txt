@@ -3,56 +3,56 @@ IchigoJam BASIC 0.8.0～
 IchigoJam BASIC RPi
 IchigoJam PC 0.1 beta 5～
 -----------------------------------------------------------
-[ 機能 ]
-プログラムを読み込み、実行します。
+[Function]
+Load the program and execute it.
 
-[ コマンド 書式 ]
-LRUN [<プログラム番号>]
-LRUN [<プログラム番号>][,<行番号>] (1.0.0 beta4～)
+[Command format]
+LRUN [<program number>]
+LRUN [<program number>] [, <line number>] (1.0.0 beta 4 ~)
 
-[ 例 ]
+[Example]
 LRUN 1
-LRUN 3,200 (1.0.0 beta4～)
+LRUN 3,200 (1.0.0 beta 4 ~)
 
-[ 解説 ]
-現在 IchigoJam で読み込まれているプログラムは消去され、
-LRUN で読み込まれたプログラムに改められます。
-変数・配列は 0.9.3 までは初期化されます。
-0.9.4 以降は初期化されません。CLV や LET などを使用して下さい。
+[Commentary]
+Programs currently loaded by IchigoJam are erased,
+It is changed to the program loaded with LRUN.
+Variables and arrays are initialized up to 0.9.3.
+It will not be initialized after 0.9.4. Please use CLV or LET.
 
-<プログラム番号> の値は 0～2 または 0～3 および 100～226 です。
-IchigoJam 本体は 0.9.9 まで 0～2、1.0.0 から 0～3 に対応します。 
-省略した時は 0.9.8 まで 0、
-0.9.9 より最新でアクセスしたプログラム番号になります。
-IoT 対応版は 1.2b59 IoT より本体の保存は 0 のみです。
-起動直後で省略した場合は 0 を実行します。
+The value of <program number> is 0 to 2 or 0 to 3 and 100 to 227.
+IchigoJam main body corresponds to 0.9.9 from 0 to 2, 1.0.0 to 0 to 3.
+When omitted, it is 0 up to 0.9.8,
+It becomes the program number which accessed latest from 0.9.9.
+The IoT compatible version is only 1.2b59 IoT and the body is only saved to 0.
+If it is omitted immediately after startup, 0 is executed.
 
-0.9.3 より外付け EEPROM へ保存します。100～226 が有効です。
-EEPROM の容量と配線によって有効な値は変化します。
-使用できないプログラム番号は File Error になります。
+From 0.9.3, save to external EEPROM, 100 to 227 is valid.
+Valid values ​​vary depending on the EEPROM capacity and wiring.
+The program number that can not be used is File Error.
 
-EEPROM は 32K～1024K ビットで使用可能で、
-0.9.9 で 1024K ビットを使用する場合および
-一部の EEPROM を除いて中身を完全に使用できます。
-32K～256K ビットでは同じプログラムを
-複数のプログラム番号で参照する事にご注意下さい。
-16K ビット以下の EEPROM は I2C のアクセスに違いがあるため、
-プログラム保存に使用する事ができません。
+EEPROM can be used with 32K to 1024K bits,
+When using 1024K bits at 0.9.9 and
+Contents can be completely used except some EEPROM.
+For the 32K to 256K bits the same program
+Please be careful to refer with multiple program numbers.
+Because there is a difference in the access of I2C for EEPROM of 16K bit or less,
+It can not be used for saving programs.
 
-プログラム番号にプログラムがない場合（NEW で SAVE した場合）は
-エラーにならず、OK 表示になります。
+If there is no program in the program number (SAVE with NEW)
+It will not result in an error, it will be OK display.
 
-プログラムを読み込むのみの場合は LOAD を使用します。
+If you only load programs, use LOAD.
 
-プログラムに含める事も可能です。
-これによって複数のプログラムを行き来して、
-長いプログラムを作る事もできます。
+It can also be included in the program.
+This allows you to navigate through multiple programs,
+You can also make long programs.
 
-1.0.0 beta4 より <行番号> を指定する事ができます。
-これによりプログラム内の特定行からの実行が可能です。
+<line number> can be specified from 1.0.0 beta4.
+This allows execution from a specific line in the program.
 
-技術的には本体や EEPROM の領域 1K バイト分を
-仮想アドレス領域 #C00～#FFF に写しています。
-そのため、プログラムの空いた領域（#FFF に近い後ろの領域）を POKE で値を入れ
-SAVE 行う事でこの値も含めて保存し、
-LOAD・LRUN の後 PEEK でこの値を取り出せます。
+Technically, 1 Kbyte area of ​​the main body and EEPROM
+It is copied to virtual address area #C00 to #FFF.
+For this reason, POKE puts in a vacant area of ​​the program (area behind #FFF) with a value
+Save this value including SAVE,
+After LOAD and LRUN this value can be retrieved with PEEK.

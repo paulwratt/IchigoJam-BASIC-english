@@ -1,55 +1,55 @@
 PEEK
 IchigoJam BASIC 0.9.8～
-IchigoJam PC
-IchigoJam PC 非対応
+IchigoJam BASIC RPi
+IchigoJam PC not compatible
 -----------------------------------------------------------
-[ 機能 ]
-仮想アドレス領域から値を取得します。
+[Function]
+Get value from virtual address area.
 
-[ コマンド 書式 ]
-PEEK(<番地>)
+[Command format]
+PEEK (<number>)
 
-[ 例 ]
+[Example]
 PEEK(#E0*8)
 
-[ 解説 ]
-<番地> は #000～#FFF が有効です。
-1.1 beta8 より #000～#100F が有効です。
+[Commentary]
+#000 to #FFF are effective for <number>.
+Between #000 and #100F is valid from 1.1 beta 8.
 
-下記は 0.9.9-RC6 以降で有効になります。
-それ以前ではキャラクターパターンなど一部が有効です。
+The following are valid in 0.9.9 - RC 6 or later.
+Some characters such as character patterns are effective before that.
 
-キャラクターパターンの変更は <番地> #000～#7FF で対応し、
-キャラクターコード 0（#00）～255（#FF）のパターンを取得できます。
-キャラクターコード番号×8から8つの番地（+0～+7）が1文字で構成されます。
-番地の若い順に上から入っています。
-POKE と異なり、全キャラクターコードを取得可能です。
+Change of character pattern corresponds to <address> #000 to #7FF,
+Pattern code 0 (#00) to 255 (#FF) patterns can be acquired.
+Eight addresses (+0 to +7) are composed of one character from character code number ×8.
+It entered from the top in the order of the youngest of the numbers.
+Unlike POKE, all character codes can be acquired.
 
-配列および変数が <番地> #800～#8FF に対応します。
-下位8ビット・上位8ビットの順で、一番上位のビットが符号ビットです。
-#800～#801 が [0]、#802～#803 が [1] ……とつづき、#8CA～#8CB の [101] まで、
-つづいて #8CC～#8CD が変数 A から変数がつづき、#8FE～#8FF の変数 Z となります。
+Arrays and variables correspond to <address> #800 to #8FF.
+The most significant bit is the sign bit in the order of the lower 8 bits and the upper 8 bits.
+Continuing from #800 to #801 for [0], #802 to #803 for [1] ..., up to [101] for #8CA to #8CB,
+Subsequently, variables #8CC to #8CD are from variable A and become variable Z for #8FE to #8FF.
 
-画面表示のキャラクターが #900～#BFF に対応します。
-#900 が横座標 0、縦座標 0 のキャラクターコード、そこから横につづき、
-#BFF の横座標 31、縦座標 23 までです。
+The screen display character corresponds to #900 to #BFF.
+#900 is a character code with abscissa 0 and ordinate 0, followed by the character code,
+It is up to the abscissa (x-axis) 31 and the ordinate (y-axis) 23 of #BFF.
 
-プログラムが #C00～#1001 に対応します。
-（#1000～#1001 は 1.1 beta8 より）
-行番号 2 番地分(下位8ビット・上位8ビットの順)、
-文字数 1 番地分(終了コードを含む) の後
-行番号を除いたプログラムそのものが入ります。
-終了コードは #00 で1バイトですが、
-次の番地が奇数の場合はもう 1 バイト #00 を追加します。
-これにより、行番号は必ず偶数の番地になるようにしています。
-1023～1024 バイトになると終了コード分が #1000～#1001 に入り、
-1.1 beta8 以降はこれを検出できます。
+The program corresponds to #C00 - #1001.
+(From #1000 to #1001 from 1.1 beta 8)
+Line number 2 address (lower 8 bits, upper 8 bits in this order),
+After the character number 1 address (including the end code)
+The program itself excluding the line number is entered.
+The end code is #00 and 1 byte,
+If the next address is odd, add another byte #00.
+As a result, the line number is always made to be an even number.
+When it becomes 1023 to 1024 bytes, the end code enters #1000 to #1001,
+1.1 beta 8 and later can detect this.
 
-キー状態が #1002～#100F に対応します。（1.1 beta8 より）
-#1002 矢印キー・スペースキーの状態（1 ←・2 →・4 ↑・8 ↓・）
-#1003 キーバッファに入っている数
-#1004～ キーバッファ
+The key status corresponds to #1002 to #100F. (From 1.1 beta 8)
+#1002 Arrow key · Space key status (1 ← · 2 → · 4 ↑ · 8 ↓ ·)
+#1003 Number in key buffer
+#1004 ~ Key Buffer
 
-マシン語を入れた場合、マシン語本体、
-または USR で実行した結果の値取得として PEEK を取得できます。
-IchigoJam PC は CPU が異なるため、USR は使用できません。
+When entering machine language, machine language body,
+Or you can get PEEK as value acquisition result of USR.
+Because IchigoJam PC has different CPU, USR can not be used.

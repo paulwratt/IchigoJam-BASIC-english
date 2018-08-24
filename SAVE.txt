@@ -3,51 +3,51 @@ IchigoJam BASIC 0.8.0～
 IchigoJam BASIC RPi
 IchigoJam PC 0.1 beta 5～
 -----------------------------------------------------------
-[ 機能 ]
-プログラムを保存します。
+[Function]
+Save the program.
 
-[ コマンド 書式 ]
-SAVE [<プログラム番号>]
+[Command format]
+SAVE [<program number>]
 
-[ 例 ]
+[Example]
 SAVE 1
 
-[ 解説 ]
-<プログラム番号> の値は 0～2 または 0～3 および
-100～226 または 100～227 です。
+[Commentary]
+The value of <program number> is 0 to 2 or 0 to 3 and
+It is 100 to 226 or 100 to 227.
 
-IchigoJam 本体は 0.9.9 RC まで 0～2、
-1.0.0 beta から 0～3 に対応します。（IchigoJam PC を含みます）
-IoT 対応版は 1.2b59 IoT より本体の保存は 0 のみです。
-省略した時は 0.9.8 RC まで 0、
-0.9.9 RC より最新でアクセスしたプログラム番号になります。
-起動直後で省略した場合は 0 へ保存します。
+IchigoJam main body 0 to 2 up to 0.9.9 RC,
+It corresponds to 0 to 3 from 1.0.0 beta. (Including IchigoJam PC)
+The IoT compatible version is only 1.2b59 IoT and the body is only saved 0.
+When omitted, it is 0 until 0.9.8 RC,
+It becomes the program number which accessed latest from 0.9.9 RC.
+If you omit it immediately after startup, save it to 0.
 
-0.9.3 より外付け EEPROM へ保存します。100～226 が有効です。
-0.9.9 RC より 100～227 が有効です。
-EEPROM の容量と配線によって有効な値は変化します。
-使用できないプログラム番号は File Error になります。
+From 0.9.3, save to external EEPROM. 100 to 226 is valid.
+Values ​​from 100 to 227 are valid from 0.9.9 RC.
+Valid values ​​vary depending on the EEPROM capacity and wiring.
+The program number that can not be used is File Error.
 
-EEPROM は 32K～1024K ビットで使用可能で、
-0.9.9 RC で 1024K ビットを使用する場合および
-一部の EEPROM を除いて中身を完全に使用できます。
-32K～256K ビットでは同じプログラムを
-複数のプログラム番号で参照する事にご注意下さい。
-16K ビット以下の EEPROM は I2C のアクセスに違いがあるため、
-プログラム保存に使用する事ができません。
+EEPROM can be used with 32K to 1024K bits,
+When using 1024K bits with 0.9.9 RC and
+Contents can be completely used except some EEPROM.
+For the 32K to 256K bits the same program
+Please be careful to refer with multiple program numbers.
+Because there is a difference in the access of I2C for EEPROM of 16K bit or less,
+It can not be used for saving programs.
 
-IchigoJam BASIC RPi は 1.2b15RPi・1.2.4RPi まで 0～3 および 100～227 です。
-(micro)SD メモリーカードの files ディレクトリ内ファイルへ保存します。
-1.2b16RPi・1.2.5RPi より 0～227 となりました。
-0～99 は SD メモリカード、100～227 は EEPROM へ保存します。
+IchigoJam BASIC RPi is 0 to 3 and 100 to 227 to 1.2b15 RPi · 1.2.4 RPi.
+(micro) Save to the file in the files directory of the SD memory card.
+It became 0 to 227 from 1.2b16 RPi and 1.2.5 RPi.
+0 to 99 are SD memory cards, 100 to 227 are saved in EEPROM.
 
-IchigoJam PC は 0～3 の本体保存に対応していますが、電源を切ると削除されます。
+IchigoJam PC supports 0 to 3 body saving, but it is deleted when the power is turned off.
 
-保存したプログラムを消去したい場合は
-NEW でプログラムがなくなっている状態で SAVE <プログラム番号> をする事で、
-<プログラム番号> のプログラムを消去する事ができます。
+If you want to delete the saved program
+By doing SAVE <program number> with NEW missing program,
+Program of <program number> can be deleted.
 
-技術的には仮想アドレス領域 #C00～#FFF を本体・EEPROM の領域に写しています。
-そのため、プログラムの空いた領域（#FFF に近い後ろの領域）を POKE で値を入れ
-SAVE 行う事でこの値も保存する事ができます。
-LOAD・LRUN の後 PEEK でこの値を取り出せます。
+Technically, virtual address areas #C00 to #FFF are copied to the main body / EEPROM area.
+For this reason, POKE puts in a vacant area of ​​the program (area behind #FFF) with a value
+By SAVE you can also save this value.
+After LOAD and LRUN this value can be retrieved with PEEK.

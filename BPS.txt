@@ -3,30 +3,31 @@ IchigoJam BASIC 0.7.7～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-シリアル通信の通信速度を設定します。
+[Function]
+Sets the communication speed of serial communication.
 
-[ コマンド 書式 ]
-BPS [<通信速度>]
-BPS [<通信速度>][,<I2C 通信速度>] (1.2.4～・1.2b18RPi～)
+[Command format]
+BPS [<communication speed>]
+BPS [<communication speed>] [, <I2C communication speed>] (1.2.4 to 1.2b18 RPi ~)
 
-[ 例 ]
+[Example]
 BPS 9600
 BPS 0
 
-[ 解説 ]
-<通信速度> の値は bps です。（事実上有効なのは 28800bps までと予測されます）
-それ以外に次の値・省略が有効です。
+[Commentary]
+The value of <communication speed> is bps. (It is predicted that up to 28800 bps is effectively effective)
+Other than that, the following values ​​and abbreviations are valid.
 
-    省略・0 115200bps
-         -1  57600bps
-         -2  38400bps
+    Abbreviation
+          0 115200 bps
+         -1 57600 bps
+         -2 38400 bps
 
--1・-2 は 1.1 beta16 以降で有効です。
+-1 · -2 is effective when 1.1 beta 16 or later.
 
-1.2.4・1.2b56 以降ではマイナスの設定が拡張され、
--100 以下の設定が対応しています。
-例えば -2304 で 230400bps の設定となります。
+1.2.4 - Minus setting is expanded in 1.2 b 56 and later,
+A setting of -100 or less is supported.
+For example, it is set to 230400 bps at -2304.
 
-1.2.4・1.2b56 以降および 1.2b18RPi 以降では <I2C 通信速度> が設定できます。
-値は kHz で、デフォルトは 400 です。1.2.3 以前は 400kHz 固定です。
+1.2.4 - <I2C communication speed> can be set for 1.2 b 56 or later and 1.2 b 18 RPi or later.
+The value is kHz, default is 400. Before 1.2.3, 400 kHz is fixed.

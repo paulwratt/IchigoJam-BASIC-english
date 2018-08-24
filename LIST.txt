@@ -3,26 +3,26 @@ IchigoJam BASIC
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-プログラムを一覧表示します。
+[Function]
+List the programs.
 
-[ コマンド 書式 ]
-LIST [[<開始行>,]<終了行>]
+[Command format]
+LIST [[<start line>,] <end line>]
 
-[ 例 ]
+[Example]
 LIST
 LIST 100
 LIST 10,300
 
-[ 解説 ]
-<開始行> <終了行> を省略した場合はプログラムをすべて表示します。
+[Commentary]
+If <start line> and <end line> is omitted, all program lines are displayed.
 
-, を付けずに一つの行番号のみとした場合は <終了行> を指定した事になり、
-先頭から指定行を表示します。
+If you specify only one line number without appending, you have specified <end line>
+The specified line is displayed from the beginning.
 
-1.2 beta 19 より , を付けない <終了行> のみの場合はその行のみを表示します。
-1.2 beta 20 より -<終了行> とマイナスにした場合は <終了行> までを表示します。
-<開始行>,0 とした場合は、<開始行> 以降を表示します。
-1.2 beta 43 より表示対象を行番号 16384 までにしています。
-1.2 beta 44 より <終了行> を 0 にした場合、
-<開始行> に 16385 以上を入れた場合は 16385 以降を含めて最終行までを表示します。
+From 1.2 beta 19, if only <end line> is not attached, only that line is displayed.
+1.2 beta From 20 - <end line> and if it is minus <end line> will be displayed.
+<starting line>, If it is 0, it displays <starting line> and after.
+From 1.2 beta 43 the display target is set to line number 16384.
+1.2 When beta 44 sets <end line> to 0,
+If 16385 or more is entered in <start line>, it displays up to the last line including 16385 onwards.

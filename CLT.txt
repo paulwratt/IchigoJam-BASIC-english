@@ -3,16 +3,16 @@ IchigoJam BASIC 0.8.0～
 IchigoJam BASIC RPi
 IchigoJam PC 0.1 beta 6～
 -----------------------------------------------------------
-[ 機能 ]
-経過時間をリセットします。
+[Function]
+Reset elapsed time.
 
-[ コマンド 書式 ]
+[Command format]
 CLT
 
-[ 例 ]
+[Example]
 CLT
 
-[ 解説 ]
-TICK で返す値が 0 にリセットされます。
-0.9.8 より、RUN の実行は 0 リセットしない事になったため、
-プログラムによっては CLT でリセットを行うのが必要になります。
+[Commentary]
+The value returned by TICK is reset to 0.
+Since v0.9.8, since execution of RUN is not reset to 0,
+Depending on the program, it is necessary to reset with CLT.

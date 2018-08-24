@@ -3,14 +3,14 @@ IchigoJam BASIC 1.1.0～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-乱数 RND の初期化を行います。
+[Function]
+Initialize the random number RND.
 
-[ コマンド 書式 ]
-SRND <値>
+[Command format]
+SRND <value>
 
-[ 例 ]
+[Example]
 SRND 0
 
-[ 解説 ]
-<値> によって RND が参照する乱数表を変化させます。
+[Commentary]
+Change the random number table that RND refers to by <value>.

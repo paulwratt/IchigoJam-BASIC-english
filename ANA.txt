@@ -1,25 +1,25 @@
 ANA
 IchigoJam BASIC 0.8.4～
-IchigoJam BASIC RPi 非対応
-IchigoJam PC 非対応
+IchigoJam BASIC RPi not supported
+Not compatible with IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-IN2 端子 および BTN 端子 の電圧を返します。
+[Function]
+Returns the voltages at the IN2 and BTN terminals.
 
-[ コマンド 書式 ]
-ANA([<値>])
+[Command format]
+ANA([<value>])
 
-[ 例 ]
-A=ANA()
-I=ANA(2)
+[Example]
+A = ANA()
+I = ANA(2)
 
-[ 解説 ]
-返し値は 0～1023 で、電圧 0V～3.3V に対応します。
-1V が 310 になります。
-<値> 指定は 1.0.0 beta6 から対応し、
-1.0.0 beta6～8 は 1・省略時=IN2、2=BTN、
-1.0.0 beta9～ は 0・省略時=BTN、2=IN2、
-1.1.0 beta1～1.1 beta 4・1.0.2 beta9～11 は 0・5・省略時=BTN、2=IN2、
-1.1 beta5～ は 0・9・省略時=BTN、2=IN2、5～8=OUT1～4(IN5～8) となります。
+[Commentary]
+The return value is 0 to 1023, corresponding to the voltage 0 V to 3.3 V.
+1 V becomes 310.
+<Value> designation corresponds from 1.0.0 beta 6,
+1.0.0 beta 6 to 8 are 1 · When omitted: IN 2, 2 = BTN,
+1.0.0 beta 9 is 0 · when omitted = BTN, 2 = IN 2,
+1.1.0 beta 1 to 1.1 beta 4 · 1.0.2 beta 9 to 11 are 0 · 5 · when omitted: BTN, 2 = IN 2,
+1.1 beta 5 ~ is 0 · 9 · Default = BTN, 2 = IN 2, 5 ~ 8 = OUT 1 ~ 4 (IN 5 ~ 8).
 
-IchigoJam BASIC RPi では常に 0 を返します。
+IchigoJam BASIC RPi always returns 0.

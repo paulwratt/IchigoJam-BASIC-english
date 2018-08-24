@@ -3,18 +3,18 @@ IchigoJam BASIC 1.0.0～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-キーバッファ・キーステートをクリアします。
+[Function]
+Clear keyboard buffer and key state.
 
-[ コマンド 書式 ]
+[Command format]
 CLK
 
-[ 例 ]
+[Example]
 CLK
 
-[ 解説 ]
-いくつかのキーが入力されている場合、
-（特にキーを押しっぱなしにしてキーリピートが発生する場合）
-キーバッファに入力が蓄えられる事から
-INKEY() や INPUT などの入力受付時に悪影響を及ぼす場合があります。
-CLK でクリアしておく事で、この問題を対処する事ができます。
+[Commentary]
+When several keys are input,
+(Especially when the key repeat occurs with keeping the key pressed)
+Since the input is stored in the key buffer
+It may adversely affect input acceptance such as INKEY () or INPUT.
+By clearing it with CLK, we can deal with this problem.

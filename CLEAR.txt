@@ -1,4 +1,4 @@
-CLV
+CLEAR
 IchigoJam BASIC 0.9.4～
 IchigoJam BASIC RPi
 IchigoJam PC
@@ -7,12 +7,12 @@ IchigoJam PC
 Initialize variables and arrays.
 
 [Command format]
-CLV
 CLEAR
+CLV
 
 [Example]
-CLV
 CLEAR
+CLV
 
 [Commentary]
 Up to 0.9.3 variables and arrays were initialized at the stage of RUN,
@@ -20,6 +20,6 @@ Up to 0.9.3 variables and arrays were initialized at the stage of RUN,
 As a result, when another program is executed by LRUN from the program
 Variables and arrays can now be inherited.
 It is also possible to set and inherit variables and arrays in direct mode.
-Therefore, initialization of variables and arrays is specified using CLV.
+Therefore, initialization of variables and arrays is specified using CLEAR.
 
-CLEAR can be used instead of CLV.
+CLEAR is an alias for CLV.

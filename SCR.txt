@@ -25,7 +25,7 @@ The coordinates that can be normally acquired are
 Up to 0.9.8 RC, <abscissa> is 0 to 35, <ordinate> is 0 to 26,
 After 0.9.9 RC, <abscissa> is 0 to 31, and <vertical coordinate> is 0 to 23.
 The character code is returned for the value.
-SCR can be used instead of VPEEK.
+SCR is an alias for VPEEK.
 
 From 0.9.0, when the coordinates are omitted,
 Get the character at the cursor position.

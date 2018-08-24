@@ -3,18 +3,18 @@ IchigoJam BASIC 0.9.9～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-10進数を2進数表記に変換します。
+[Function]
+Convert decimal number to binary notation.
 
-[ コマンド 書式 ]
-BIN$(<値>[,<桁数>])
+[Command format]
+BIN$(<value> [, <number of digits>])
 
-[ 例 ]
-BIN$(255) → 11111111 が返ります
-BIN$(-1,16) → 1111111111111111 が返ります
+[Example]
+BIN$(255) → 11111111 will be returned
+BIN$(-1,16) → 1111111111111111 will be returned
 
-[ 解説 ]
-<桁数> を省略した時は最小限の桁数で出力します。
-出力する桁数が少ない場合は頭を 0 で埋めます。
+[Commentary]
+When <number of digits> is omitted, it outputs with the minimum number of digits.
+If the number of digits to be output is small, fill the head with 0.
 
-BIN$ は PRINT で使う事になります。
+BIN$ will be used for PRINT.

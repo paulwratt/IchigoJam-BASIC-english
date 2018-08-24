@@ -3,65 +3,65 @@ IchigoJam BASIC 0.9.4～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-バージョン番号を取得します。
+[Function]
+Get the version number.
 
-[ コマンド 書式 ]
+[Command format]
 VER()
 
-[ 例 ]
+[Example]
 ? VER()
 
-[ 解説 ]
-返し値のバージョン番号は次のとおりです。(2018年8月現在)
-IchigoJam PC・IchigoJam ap・
-IchigoJam Web by WebAssembly・DakeJacket 版は
-派生元の IchigoJam BASIC バージョン番号になります。
-一方 IchigoJam BASIC RPi は独自のバージョン番号です。
-0.9.3 以前はエラーになります。
+[Commentary]
+The return version number is as follows. (As of August 2018)
+IchigoJam PC and IchigoJam ap and
+IchigoJam Web by WebAssembly and DakeJacket version
+It becomes the IchigoJam BASIC version number of the derivation source.
+IchigoJam BASIC RPi is a unique version number.
+An error occurs before 0.9.3.
 
            94 = 0.9.4
            95 = 0.9.5
            96 = 0.9.6
-           97 = 0.9.7 (正式版)
-           98 = 0.9.8 RC1～12、RC 番号の確認不可
-           99 = 0.9.9 RC1～12、RC 番号の確認不可
- 10001～10016 = 1.0.0 beta1～16、下2桁が beta 番号
-        10017 = 1.0.0 (ネット上では非公開・一部製品に同梱)
-        10100 = 1.0.1 (正式版)
-        10212 = 1.0.2 beta12、下2桁が beta 番号 ※
- 10201～10211 = 1.0.2 beta1～11、下2桁が beta 番号 ※
-        11001 = 1.1.0 beta1
-        11002 = 1.1.0 beta2 (ネット上では非公開) または 1.1 beta2
- 11003～11017 = 1.1 beta3～17、下2桁が beta 番号
-        11015 = IchigoJam PC 0.1 beta 12
-        11018 = 1.1.0 (ネット上では非公開)
-        11019 = 1.1.1 (正式版)
- 12001～12025 = 1.2 bera 1～25、下2桁が beta 番号
-        12025 = 1.2.0 (正式版。1.2 beta 25 に同じ）
+           97 = 0.9.7 (official version)
+           98 = 0.9.8 RC 1 to 12, RC number can not be confirmed
+           99 = 0.9.9 RC 1 to 12, RC number can not be confirmed
+ 10001 to 10016 = 1.0.0 beta 1 to 16, the last 2 digits are beta number
+        10017 = 1.0.0 (Private on the net · Included in some products)
+        10100 = 1.0.1 (official version)
+        10212 = 1.0.2 beta 12, the last two digits are beta numbers *
+ 10201 to 10211 = 1.0.2 beta 1 to 11, the last two digits are beta numbers *
+        11001 = 1.1.0 beta 1
+        11002 = 1.1.0 beta 2 (unpublished on the net) or 1.1 beta 2
+ 11003 to 11017 = 1.1 beta 3 to 17, the last two digits are beta number
+        11015 = Ichigo Jam PC 0.1 beta 12
+        11018 = 1.1.0 (not disclosed on the net)
+        11019 = 1.1.1 (official version)
+ 12001 to 12025 = 1.2 beta 1 to 25, the last 2 digits are beta number
+        12025 = 1.2.0 (official version, same as 1.2 beta 25)
         12026 = 1.2.0 IchigoJam BIG
         12027 = 1.2 beta 27
-        12027 = 1.2.1 (正式版。1.2 beta 27 に同じ)
- 12230～12247 = 1.2 beta 30～47、下2桁が beta 番号
-        12247 = 1.2.2 (正式版。1.2 beta 47 に同じ)
-        12348 = 1.2 beta 48 
-        12348 = 1.2.3 (正式版。1.2 beta 48 に同じ)
-        12011 = IchigoJam BASIC RPi 1.2.0RPi（正式版）★
-        12314 = IchigoJam BASIC RPi 1.2b14RPi
-        12314 = IchigoJam BASIC RPi 1.2.3RPi（正式版。1.2b14RPi に同じ）
-        12415 = IchigoJam BASIC RPi 1.2b15RPi
-        12415 = IchigoJam BASIC RPi 1.2.4RPi（正式版。1.2b15RPi に同じ）★
- 12516～12519 = IchigoJam BASIC RPi 1.2b16RPi～1.2b19RPi、下2桁が beta 番号
- 12449～12461 = 1.2b49～61、下2桁が beta 番号。IoT 対応版共通
-        12456 = 1.2.4D  (DakeJacket 版)
-        12457 = 1.2.4D2 (DakeJacket 版)
- 12520～12522 = IchigoJam BASIC RPi 1.2b20RPi～1.2b22RPi、下2桁が beta 番号
-        12522 = IchigoJam BASIC RPi 1.2.5RPi（正式版。1.2b22RPi に同じ）★
-        12623 = IchigoJam BASIC RPi 1.2.6RPi（正式版）★
+        12027 = 1.2.1 (official version, same as 1.2 beta 27)
+ 12230 to 12247 = 1.2 beta 30 to 47, the last two digits are beta numbers
+        12247 = 1.2.2 (official version, same as 1.2 beta 47)
+        12348 = 1.2 beta 48
+        12348 = 1.2.3 (official version, same as 1.2 beta 48)
+        12011 = IchigoJam BASIC RPi 1.2.0 RPi (official version) ★
+        12314 = Ichigo Jam BASIC RPi 1.2 b 14 RPi
+        12314 = IchigoJam BASIC RPi 1.2.3 RPi (official version, same as 1.2 b 14 RPi)
+        12415 = IchigoJam BASIC RPi 1.2 b 15 RPi
+        12415 = IchigoJam BASIC RPi 1.2.4 RPi (the same as the official version, 1.2 b 15 RPi) ★
+ 12516 to 12519 = IchigoJam BASIC RPi 1.2 b 16 RP i to 1.2 b 19 RPi, the last two digits are beta number
+ 12449 to 12461 = 1.2b 49 to 61, the last two digits are beta numbers. Common for IoT
+        12456 = 1.2.4 D (Dake Jacket version)
+        12457 = 1.2.4 D 2 (Dake Jacket version)
+ 12520 to 12522 = IchigoJam BASIC RPi 1.2 b 20 RPi to 1.2 b 22 RPi, the last two digits are beta number
+        12522 = IchigoJam BASIC RPi 1.2.5 RPi (official version, same as 1.2 b 22 RPi) ★
+        12623 = IchigoJam BASIC RPi 1.2.6 RPi (official version) ★
 
-※ 1.0.2 beta 12 は 1.0.1 からの後継で、
-   1.0.1 beta 11 から 1.1.0 beta 1、後の 1.1 beta に引き継がれています。
-   ただし 1.0.2 の正式公開は行われず、1.1.0 が正式公開となっています。
-★ IchigoJam BASIC RPi は 1.2.4RPi まで 1.2.3 からの派生です。
-   1.2.3RPi 以外に 1.2.0RPi・1.2.4RPi も 1.2.3 からである事にご注意下さい。
-   1.2.5RPi～1.2.6RPi は 1.2b56 および 11.2b57 IoT の仕様を含んでいます。
+※ 1.0.2 beta 12 is the successor from 1.0.1,
+   It is taken over from 1.0.1 beta 11 to 1.1.0 beta 1, later 1.1 beta.
+   However, 1.0.2 is not officially released, 1.1.0 is officially released.
+★ IchigoJam BASIC RPi is a derivation from 1.2.3 up to 1.2.4 RPi.
+   1.2.3 In addition to RPi, please note that 1.2.0 RPi and 1.2.4 RPi also comes from 1.2.3.
+   1.2.5 RPi to 1.2.6 RPi contains specifications of 1.2b56 and 1.1.2b57 IoT.

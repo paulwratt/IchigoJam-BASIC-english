@@ -3,14 +3,14 @@ IchigoJam BASIC
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-プログラムを実行します。
+[Function]
+Execute the program.
 
-[ コマンド 書式 ]
+[Command format]
 RUN
 
-[ 例 ]
+[Example]
 RUN
 
-[ 解説 ]
-プログラムを先頭の行から実行します。
+[Commentary]
+Execute the program from the first line.

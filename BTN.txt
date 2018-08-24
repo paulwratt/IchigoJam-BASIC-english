@@ -3,31 +3,31 @@ IchigoJam BASIC 0.6～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-本体のボタン・キーボードのキーが押されている状態を返します。
+[Function]
+It returns the state that the key of the body button keyboard is pushed.
 
-[ コマンド 書式 ]
-BTN([<値>])
+[Command format]
+BTN([<value>])
 
-[ 例 ]
+[Example]
 PRINT BTN()
-I=BTN(SPACE)
+I = BTN(SPACE)
 
-[ 解説 ]
-ボタンが押されている状態の場合は 1、押されていなければ 0 を返します。
-1.0.0 beta6 より BTN 端子はアナログ検出が可能です。ANA を参照して下さい。
-1.0.0 beta9 より BTN(<値>) に対応しています。
-<値> は UP DOWN LEFT RIGHT SPACE 0 です。
-INKEY() と異なり、キーバッファに影響されない現在のキー状態を得られます。
-0 は省略時同様本体ボタンです。
+[Commentary]
+Returns 1 if the button is pressed, 0 if not pressed.
+From 1.0.0 beta 6, analog detection is possible on the BTN terminal. See ANA.
+It corresponds to BTN(<value>) from 1.0.0 beta9.
+<value> is UP DOWN LEFT RIGHT SPACE 0.
+Unlike INKEY(), you get the current key state which is not affected by the key buffer.
+0 is the body button as when omitted.
 
-BTN() および BTN(0) は本体ボタンが存在する IchigoJam BASIC のみ有効です。
+BTN() and BTN(0) are valid only for IchigoJam BASIC where the body button exists.
 
-1.0.0 beta3～1.1 beta4、および 1.0.2 beta3～11 では
-BTN 端子は IN5 にも割り当てられています。
-1.1 beta 5 以降では BTN 端子が IN9 に割り当てられています。
-IN も参照して下さい。 
+1.0.0 beta 3 to 1.1 beta 4, and 1.0.2 beta 3 to 11
+The BTN terminal is also assigned to IN5.
+In 1.1 beta 5 and later, the BTN terminal is assigned to IN9.
+See also IN.
 
-SkyBerryJAM は BTN 以外に IN1・IN4 のボタンも備えています。
-KumaJam は BTN 以外に IN1 のボタンも備えています。
-共に IN コマンドで値を得る事が可能です。
+Besides BTN, SkyBerryJAM also has IN1 and IN4 buttons.
+In addition to BTN, KumaJam also has an IN1 button.
+It is possible to obtain the value with the IN command together.

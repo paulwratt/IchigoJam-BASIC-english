@@ -3,16 +3,16 @@ IchigoJam BASIC 0.3～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-乱数を発生させます。
+[Function]
+Generate a random number.
 
-[ コマンド 書式 ]
-RND(<数>)
+[Command format]
+RND(<number>)
 
-[ 例 ]
+[Example]
 RND(6)
 
-[ 解説 ]
-0 以上 <数> 未満の整数を返します。
-例えば <数> が 6 であれば 0～5 のいずれかを返します。
-1.1.0 以降および 1.0.2 beta 11 では SRND を用いて初期化を行えます。
+[Commentary]
+Returns an integer greater than or equal to 0 and less than <number>.
+For example, if <number> is 6, it returns one from 0 to 5.
+For 1.1.0 and later and 1.0.2 beta 11, initialization can be performed using SRND.

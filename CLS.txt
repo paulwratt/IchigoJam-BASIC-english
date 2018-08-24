@@ -3,23 +3,23 @@ IchigoJam BASIC
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-画面をクリアします。
+[Function]
+Clear the screen.
 
-[ コマンド 書式 ]
+[Command format]
 CLS
 
-[ 例 ]
+[Example]
 CLS
 
-[ 解説 ]
-画面に表示されている文字をすべて消します。
+[Commentary]
+Erase all characters displayed on the screen.
 
-シリアル接続している場合、
-1.1 beta 以降では対応アプリで画面クリアが動作します。
-UART でこの動作を変更できます。
+When connecting with serial,
+On 1.1 beta onwards, screen clear will work with the corresponding application.
+You can change this behavior with UART.
 
-画面領域の範囲のみがクリアされます。
-1.2 beta 34-5 以降の VIDEO による拡大表示では
-画面外になる領域は変化しません。
-そのため未使用の領域を別目的で使用できます。
+Only the range of the screen area is cleared.
+1.2 beta In the enlarged display by VIDEO after 34-5
+The area outside the screen does not change.
+Therefore, unused areas can be used for another purpose.

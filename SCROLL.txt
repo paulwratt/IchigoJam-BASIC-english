@@ -3,21 +3,21 @@ IchigoJam BASIC 0.9.7～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-上下左右にスクロールを行います。
+[Function]
+Scroll up, down, left and right.
 
-[ コマンド 書式 ]
-SCROLL <方向>
+[Command format]
+SCROLL <direction>
 
-[ 例 ]
+[Example]
 SCROLL 2
 
-[ 解説 ]
-上下左右の一方向に1文字分スクロールを行います。
-<方向> は次のとおりです。
-UP・DOWN・LEFT・RIGHT は 1.0.0 beta7 より対応しています。
+[Commentary]
+Scroll one character up, down, left, or right in one direction.
+<direction> is as follows.
+UP, DOWN, LEFT, RIGHT are supported from 1.0.0 beta 7.
 
-    0・UP    = 上
-    1・RIGHT = 右
-    2・DOWN  = 下
-    3・LEFT  = 左
+    0 · UP = up
+    1 · RIGHT = right
+    2 · DOWN = down
+    3 · LEFT = left

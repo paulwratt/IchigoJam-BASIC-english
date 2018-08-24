@@ -3,18 +3,18 @@ IchigoJam BASIC 1.1.0～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-停止した行からプログラムの実行を再開します。
+[Function]
+Restart program execution from the stopped line.
 
-[ コマンド 書式 ]
+[Command format]
 CONT
 
-[ 例 ]
+[Example]
 CONT
 
-[ 解説 ]
-Esc キーによるプログラムの停止、
-または STOP コマンドでのプログラム停止した行から
-再開を行います。
-CONT は STOP からの続きではなく、
-停止した行の先頭から実行する事にご注意下さい。
+[Commentary]
+Stopping program with Esc key,
+Or from the program stopped line with the STOP command
+We will resume.
+CONT is not a continuation from STOP,
+Please be careful to execute from the beginning of the stopped line.

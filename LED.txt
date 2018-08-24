@@ -3,29 +3,29 @@ IchigoJam BASIC
 IchigoJam BASIC RPi
 IchigoJam PC 0.1 beta 5～
 -----------------------------------------------------------
-[ 機能 ]
-ランプを点灯・消灯します。
+[Function]
+Turn on / off the lamp.
 
-[ コマンド 書式 ]
-LED <数>
+[Command format]
+LED <number>
 
-[ 例 ]
+[Example]
 LED 1
 LED 0
 
-[ 解説 ]
-IchigoJam 本体に付いているランプの点灯・消灯を行います。
-IchigoJam PC ではキーボードのランプを点灯・消灯します。
-IchigoJam BASIC RPi では ACT ランプを点灯・消灯します。
-<数> は 0 以外で点灯、LED 0 で消灯です。
+[Commentary]
+IchigoJam Illuminates and turns off the lamp attached to the main unit.
+IchigoJam PC turns on / off the keyboard lamp.
+IchigoJam BASIC RPi turns the ACT lamp on / off.
+<Number> lights with a value other than 0, LED0 turns off.
 
-1.1 beta 以降および 1.0.2 beta3～11 では
-OUT7 として LED が使えるようになり、
-例えば OUT 7,n で LED n と同じ動作ができるようになっています。
-OUT を参照して下さい。
+For 1.1 beta or later and 1.0.2 beta 3 to 11
+As LED can be used as OUT7,
+For example OUT 7, n can operate the same as LED n.
+See OUT.
 
-SkyBerryJAM では 5 つあるランプのうち、一番左が LED で変化します。
-他 4 つのランプは OUT1～4 端子相当です。OUT コマンドで変化します。
-LED と OUT7 が共通なので、OUT コマンドで一斉に制御可能です。
+Of the five lamps in SkyBerryJAM, the leftmost changes with the LED.
+The other four lamps are equivalent to OUT1 to 4 terminals. It changes with the OUT command.
+Since LED and OUT7 are common, it can be controlled all at once with OUT command.
 
-IchigoJam BASIC RPi では OUT 7 と LED は別に扱われています。
+In IchigoJam BASIC RPi, OUT7 and LED are handled separately.

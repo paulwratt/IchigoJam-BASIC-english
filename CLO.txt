@@ -3,15 +3,15 @@ IchigoJam BASIC 1.2.0～
 IchigoJam BASIC RPi
 IchigoJam PC 非対応
 -----------------------------------------------------------
-[ 機能 ]
-入出力状態を初期化します。
+[Function]
+Initialize the input / output state.
 
-[ コマンド 書式 ]
+[Command format]
 CLO
 
-[ 例 ]
+[Example]
 CLO
 
-[ 解説 ]
-IN の -1 設定による OUT 端子の増加などの設定をなくし
-初期状態にします。
+[Commentary]
+It eliminates setting such as increase of OUT terminal etc. by IN setting of -1
+It will be in the initial state.

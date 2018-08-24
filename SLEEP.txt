@@ -1,25 +1,25 @@
 SLEEP
 IchigoJam BASIC 0.7～
-IchigoJam BASIC RPi 非対応
+IchigoJam BASIC RPi not supported
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-プログラムの実行を休止します。
+[Function]
+Pauses program execution.
 
-[ コマンド 書式 ]
+[Command format]
 SLEEP
 
-[ 例 ]
+[Example]
 SLEEP
 
-[ 解説 ]
-SLEEP でプログラムの実行が停止され、ボタン入力待ちとなります。
-IchigoJam 本体のボタンを押すと、IchigoJam の起動状態に戻ります。
-完全にリセット（電源 OFF→ON）した動きになりますので、
-数秒ボタンを押したまま
-（1.0.0 beta より起動 BEEP 音が鳴った後も押したまま）にする事で
-0 番のプログラムを起動する事ができます。
-1.0.0 beta16 より、SLEEP 復帰後は必ず 0 番のプログラムを起動します。
-この際は起動表示が行われなくなっています。
+[Commentary]
+Execution of the program is stopped by SLEEP, and it waits for button input.
+When IchigoJam's button is pressed, it returns to the IchigoJam startup state.
+Since it will be a motion that completely reset (power OFF → ON)
+Hold down the button a few seconds
+(Starting from 1.0.0 beta and keeping it pressed even after BEEP sounds)
+You can start program number 0.
+Beginning with 1.0.0 beta 16, always start the program number 0 after returning from SLEEP.
+In this case, startup display is no longer performed.
 
-IchigoJam BASIC RPi では何も動作しません。
+IchigoJam BASIC RPi does not work at all.

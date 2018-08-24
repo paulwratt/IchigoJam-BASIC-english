@@ -1,28 +1,28 @@
 PWM
 IchigoJam BASIC 1.1.0～
 IchigoJam BASIC RPi
-IchigoJam PC 非対応
+IchigoJam PC not compatible
 -----------------------------------------------------------
-[ 機能 ]
-OUT 端子にパルス幅変調を行います。
+[Function]
+Perform pulse width modulation on the OUT terminal.
 
-[ コマンド 書式 ]
-PWM <端子>,<パルス幅>[,<パルス周期>]
+[Command format]
+PWM <terminal>, <pulse width> [, <pulse period>]
 
-[ 例 ]
+[Example]
 PWM 2,10
 PWM 2,10,20
-PWM 2,4800,-9600 (1.2 beta13～)
+PWM 2,4800,-9600 (1.2 beta 13 ~)
 
-[ 解説 ]
-<端子> は 2～5 で OUT2～5 に対応します。もう片方は GND または OUT1 用います。
-<パルス幅> は 0.01 ミリ秒単位（100＝1 ミリ秒）で HIGH になる時間を設定します。
-サーボには 100～200 の値を用います。
-<パルス周期> は 0.01 ミリ秒単位でパルスの周期を指定します。
-省略時は 2000 で 20 ミリ秒です。
+[Commentary]
+<terminal> corresponds to OUT2 ~ 5 with terminal pins 2 ~ 5. The other side uses GND or OUT1.
+<pulse width> sets the time when it becomes HIGH in 0.01 millisecond increments (100 = 1 millisecond).
+Values ​​from 100 to 200 are used for servo.
+<pulse period> specifies the pulse period in units of 0.01 milliseconds.
+The default is 2000, 20 milliseconds.
 
-1.2 beta 13 よりマイナス値にすると <パルス幅> と <パルス周期> が
-480 倍高速になります。
-PWM 2,10*480,20*-480 と PWM 10,20 が同じ動作になります。
+1.2 beta When it is minus value from 13, <pulse width> and <pulse cycle>
+It becomes 480 times faster.
+PWM 2,10*480, 20*-480 and PWM 10,20 have the same operation.
 
-IchigoJam BASIC RPi では <端子> が 3・4 のみ対応しています。
+IchigoJam BASIC RPi only supports terminals 3 and 4.

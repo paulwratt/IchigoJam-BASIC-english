@@ -3,25 +3,24 @@ IchigoJam BASIC 1.1.0～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-言語の種類を返します。
+[Function]
+Returns the language type.
 
-[ コマンド 書式 ]
+[Command format]
 LANG()
 
-[ 例 ]
+[Example]
 L=LANG()
 PRINT LANG()
 
-[ 解説 ]
-返す値は次のとおりです。
+[Commentary]
+The values ​​to return are as follows.
 
-    1 カタカナ・ローマ字入力
-    2 キリル文字・モンゴル語配列（IchigoJam mn）
-    3 ベトナム語（IchigoJam vi）
-    4 AZERTY 配列（IchigoJam fr）
-    6 中国語 ボポモフォ 注音記号（IchigoJam bp）
+    1 Katakana and Romaji input
+    2 Cyrillic letter with Mongolian arrangement (IchigoJam mn)
+    3 Vietnamese (IchigoJam vi)
+    4 AZERTY sequence (IchigoJam fr)
+    6 Chinese Bopomofo Zhuyin Symbol (IchigoJam bp)
 
-IchigoJam BASIC RPi および IchigoJam PC は
-カナ文字・ローマ字入力のみが提供されているため、
-1 固定です。
+IchigoJam BASIC RPi and IchigoJam PC
+Since only Kana character and Roman character input is provided, It is fixed to 1.

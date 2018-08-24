@@ -3,15 +3,15 @@ IchigoJam BASIC 0.9.9～
 IchigoJam BASIC RPi
 IchigoJam PC 0.1 beta 5～
 -----------------------------------------------------------
-[ 機能 ]
-最新でアクセスしたファイル番号を得ます。
+[Function]
+Get the latest accessed file number.
 
-[ コマンド 書式 ]
+[Command format]
 FILE()
 
-[ 例 ]
+[Example]
 PRINT FILE()
 
-[ 解説 ]
-SAVE・LOAD・LRUN の最新でアクセスしたファイル番号を返します。
-電源オンから一度ファイルアクセスを行っていない場合は -1 を返します。
+[Commentary]
+Returns the most recently accessed file number of SAVE · LOAD · LRUN.
+If file access is not performed once from power on, -1 is returned.

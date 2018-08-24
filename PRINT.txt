@@ -3,29 +3,30 @@ IchigoJam BASIC
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-画面へ表示します。シリアルへ出力します。
+[Function]
+It displays on the screen. It outputs to serial.
 
-[ コマンド 書式 ]
-PRINT "<文字列>["][;]
-PRINT <数>[;]
-? "<文字列>["][;]
-? <数>[;]
+[Command format]
+PRINT "<character string> ["] [;]
+PRINT <number> [;]
+? "<string> ["] [;]
+? <number> [;]
 
-[ 例 ]
+[Example]
 PRINT "HI!";
 ? "HI!
+LOCATE 0,-1:?"on UART ";:?A
 
-[ 解説 ]
-文字列の場合は " で囲みます。
-その後が改行になる場合、末尾の " は省略できます。
-末尾に ; （セミコロン）を付けると、連結する事が可能です。
-; を付けない場合は改行を含めます。
-一番下の行では1行上にスクロールします。
-PRINT の代わりに ? を使用する事が可能です。
+[Commentary]
+If it is a character string, enclose it in ".
+If it becomes a newline after that, the trailing " can be omitted.
+If you attach a semicolon (;) at the end, it is possible to concatenate.
+If you do not add a ";"
+On the bottom line, scroll up one line.
+It is possible to use "?" Instead of PRINT.
 
-シリアル接続を行っている場合は、そのまま出力されます。
+When serial connection is made, it is output as it is.
 
-LOCATE で縦位置を -1 にしている場合は（例えば LOCATE 0,-1）
-画面出力を行わず、シリアル出力のみ行います。
-0.9.4 より対応しています。
+When the vertical position is set to -1 in LOCATE (for example, LOCATE 0, -1)
+It does not output screen output, but only serial output.
+It corresponds from 0.9.4.

@@ -3,28 +3,28 @@ IchigoJam BASIC 0.8.1～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-経過時間を返します。
+[Function]
+Returns the elapsed time.
 
-[ コマンド 書式 ]
+[Command format]
 TICK()
 
-[ 例 ]
+[Example]
 PRINT TICK()
 
-[ 解説 ]
-IchigoJam 実行時は常にカウント状態になっていて、
-NTSC 版では約 1/60 秒で 1 進みます。60 で約 1 秒です。
-PAL 版では約 1/50 秒で 1 進みます。50 で約 1 秒です。
-PAL 版は 1.2.2 より対応されています。日本では NTSC 版です。
-VIDEO 0 にした場合、非表示の間はカウントが行われません。
-16383（#3FFF）の次は 0 に戻ります。
-1.0.0 beta10 は 32767（#7FFF）の次が 0 に変更されています。
-1.1 beta4 より VIDEO のクロックダウンモードでも
-影響を受ける事にご注意下さい。
-VIDEO 1,10 とした場合、TICK() の値が 60 になるのは 10 秒となります。
+[Commentary]
+When IchigoJam is executed, it is always in the count state,
+In the NTSC version, it advances by 1/60 seconds. It is about 60 at about 1 second.
+In the PAL version, it advances by 1 in about 1/50 second. It is about 1 second with 50.
+The PAL version is supported from 1.2.2. It is NTSC version in Japan.
+When VIDEO is set to 0, counting is not performed while it is not displayed.
+Next to 16383 (#3FFF), it returns to 0.
+1.0.0 beta 10 is changed to 0 after 32767 (#7FFF).
+Even in clock down mode of VIDEO from 1.1 beta 4
+Please be aware that it will be affected.
+When it is set to VIDEO 1,10 then the values of TICK()  becomes 10 seconds instead 60 seconds.
 
-0.9.7 までは RUN などで 0 にリセットされますが、
-CLT を用いて 0 へリセットする事も可能です。
-0.9.8 では RUN などでのリセットが行われなくなったため
-リセットする場合は CLT を使用する必要があります。
+Up to 0.9.7 is reset to 0 by RUN etc.,
+It is also possible to reset to 0 using CLT.
+Since 0.9.8 is no longer reset by RUN etc.
+To reset, you need to use CLT.

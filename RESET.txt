@@ -3,14 +3,14 @@ IchigoJam BASIC 1.0.2～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-IchigoJam BASIC を再起動します。（ソフトウェアリセット）
+[Function]
+Restart IchigoJam BASIC. (Software reset)
 
-[ コマンド 書式 ]
+[Command format]
 RESET
 
-[ 例 ]
+[Example]
 RESET
 
-[ 解説 ]
-GND-RESET 接続時や電源切→入と同等の動作です。
+[Commentary]
+It is equivalent to GND - RESET connection or power - off → input.

@@ -3,16 +3,16 @@ IchigoJam BASIC 1.1.0～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-実行中の行番号を取得します。
+[Function]
+Get the line number being executed.
 
-[ コマンド 書式 ]
+[Command format]
 LINE()
 
-[ 例 ]
+[Example]
 PRINT LINE()
 L=LINE()
 
-[ 解説 ]
-実行中の行番号を返します。
-プログラムを実行していない場合は 0 を返します。
+[Commentary]
+Returns the line number being executed.
+If the program is not running, 0 is returned.

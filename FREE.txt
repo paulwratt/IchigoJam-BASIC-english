@@ -3,15 +3,15 @@ IchigoJam BASIC 0.8.9～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-プログラムで使用できるメモリの空き容量を返します。
+[Function]
+Returns available memory space available in the program.
 
-[ コマンド 書式 ]
+[Command format]
 FREE()
 
-[ 例 ]
+[Example]
 PRINT FREE()
 
-[ 解説 ]
-現在存在しているプログラムに対しての空き容量を返します。
-NEW から何も入れていない初期状態は 1022 または 1024 です。
+[Commentary]
+Returns the free space for the currently existing program.
+The initial state where nothing is put from NEW is 1022 or 1024.

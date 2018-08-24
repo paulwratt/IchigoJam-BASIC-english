@@ -3,51 +3,51 @@ IchigoJam BASIC 0.6～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-IN 端子の入力を得ます。
+[Function]
+Obtain input of IN terminal.
 
-[ コマンド 書式 ]
-IN([<端子>])
+[Command format]
+IN([<terminal>])
 
-[ 例 ]
+[Example]
 LET A,IN(1)
 A=IN()
 
-[ 解説 ]
-<端子> を省略した場合 IN1～4 の状態を 1、2、4、8 で表現します。
-この場合の返し値は 0～15 です。
+[Commentary]
+When <terminal> is omitted The state of IN1 - 4 is represented by 1, 2, 4, 8.
+In this case the return value is from 0 to 15.
 
-<端子> を付ける場合、<端子> の範囲は 1～4 で、返し値は 0 または 1 となります。
-<端子> を付けたコマンドは 0.8.7 以降で有効です。
-IN1・2・4 には抵抗があります。（1.0.0 beta6 までプルダウン、1.0.0 beta7 よりプルアップ）
-BTN は抵抗 R3（1MΩ）があります。IN3 は抵抗がない事にご注意下さい。
+When attaching <terminal>, the range of <terminal> is 1 to 4, and the return value is 0 or 1.
+Commands with <terminal> are valid after 0.8.7.
+IN1 and 2 and 4 has resistance. (Pulled down to 1.0.0 beta 6, pulled up from 1.0.0 beta 7)
+BTN has resistor R3 (1 MΩ). Note that IN 3 has no resistance.
 
-1.0.0 beta3～1.1beta4 では BTN を IN5 扱いとします。
-<端子> を省略した時は 16 で表現、<端子> を付ける場合は 5 となります。
+1.0.0 beta 3 ~ 1.1 Beta 4 treats BTN as IN5.
+When <terminal> is omitted, it is represented by 16, and when adding <terminal> it is 5.
 
-1.1 beta 5 以降では OUT 1,-1～OUT 4,-1 を指定する事で
-OUT1～OUT4 端子を IN5～IN8 に割り当てます。
-<端子> 省略時は 16、32、64、128、<端子> を付ける場合は 5～8 となります。
-BTN は IN9 扱いに変更され、<端子> を付ける場合は 9 となります。
-1.1 beta 5 は IN() での BTN 動作は 32 で返し、動作に問題があります。
+In 1.1 beta 5 and later, by specifying OUT 1, -1 to OUT 4, -1
+Assign the OUT1 to OUT4 terminals to IN5 to IN8.
+<Terminal> When it is omitted, it becomes 16, 32, 64, 128, and when attaching <terminal> it becomes 5 to 8.
+BTN is changed to IN9 handling, and when attaching <terminal> is 9.
+1.1 beta 5 returns BTN operation with IN() in 32, there is a problem in operation.
 
-1.1 beta 6 以降では OUT 5,-1・OUT 6,-1 を指定する事で
-OUT5～OUT6 端子を IN10～IN11 に割り当てます。
-<端子> 省略時は 512・1024、<端子> を付ける場合は 10～11 となります。
+In 1.1 beta 6 and later, by specifying OUT 5, -1 and OUT 6, -1
+Assign the OUT 5 to OUT 6 terminals to IN 10 to IN 11.
+<Terminal> When 512 and 1024 is omitted, it becomes 10 to 11 when attaching <terminal>.
 
-1.2 beta 43 より OUT 5,-2 などの指定でプルアップ入力に対応します。
+It corresponds to the pull-up input by designation of OUT 5, -2 etc. from 1.2 beta 43.
 
-SkyBerryJAM は IN1 および IN4 のボタンも備えています。
-KumaJam は IN1 のボタンも備えています。
-これらのボタンを押す事で IN の値が変化します。
-BTN と異なり、離して 1、押して 0 になる事に注意を要します。
+SkyBerryJAM also has IN1 and IN4 buttons.
+KumaJam also has an IN1 button.
+Pressing these buttons will change the value of IN.
+Unlike BTN, be careful that 1, push to 0 after separating.
 
-IchigoJam BASIC RPi は Raspberry Pi に本体ボタンがないため、
-BTN 端子の代わりに独立した IN9 端子の扱いになっています。
+IchigoJam BASIC RPi has no body button in Raspberry Pi,
+Instead of the BTN terminal, it is treated as an independent IN9 terminal.
 
-IchigoJam web・IchigoJam PC など物理的に IN 端子が存在しない場合は 0 を返します。
-IN 端子でボタンの考慮をしている場合はご注意下さい。
+IchigoJam web · IchigoJam Returns 0 if the IN terminal does not physically exist such as PC.
+Please be careful when considering the button with the IN terminal.
 
-IN2 バージョンによって BTN・OUT1～4（IN5～8）は
-電圧の状態を細かく得る事ができます。（アナログ入力）
-ANA を参照して下さい。
+Depending on IN2 version, BTN and OUT1 ~ 4 (IN 5 ~ 8)
+The state of the voltage can be obtained finely. (Analog input)
+See ANA.

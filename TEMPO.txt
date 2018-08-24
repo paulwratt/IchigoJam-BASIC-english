@@ -3,14 +3,14 @@ IchigoJam BASIC 0.9.0～
 IchigoJam BASIC RPi 1.2b17RPi～・1.2.5RPi～
 IchigoJam PC 0.1 beta 11～
 -----------------------------------------------------------
-[ 機能 ]
-PLAY のテンポを指定します。
+[Function]
+Specify the tempo of PLAY.
 
-[ コマンド 書式 ]
-TEMPO <テンポ>
+[Command format]
+TEMPO <tempo>
 
-[ 例 ]
+[Example]
 TEMPO 120
 
-[ 解説 ]
-PLAY の T に同じです。
+[Commentary]
+It is the same as T of PLAY in <MML>.

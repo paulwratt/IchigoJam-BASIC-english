@@ -3,17 +3,17 @@ IchigoJam BASIC 0.8.7～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-絶対値を返します。
+[Function]
+Return absolute value.
 
-[ コマンド 書式 ]
-ABS(<値>)
+[Command format]
+ABS(<value>)
 
-[ 例 ]
-A=ABS(15)
-I=ABS(A)
+[Example]
+A = ABS(15)
+I = ABS(A)
 
-[ 解説 ]
-<値> が負の値（マイナス）になっている場合は
-正の値（プラス）に変更し、返します。
-0 以上の値は変換なくそのまま返されます。
+[Commentary]
+When <value> is a negative value (minus)
+Change it to a positive value (plus) and return it.
+Values ​​greater than 0 will be returned without conversion.

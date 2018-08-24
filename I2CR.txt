@@ -1,51 +1,50 @@
 ﻿I2CR
 IchigoJam BASIC 0.9.9～
 IchigoJam BASIC RPi
-IchigoJam PC 非対応
+IchigoJam PC not compatible
 -----------------------------------------------------------
-[ 機能 ]
-I2C シリアルバスで接続されたデバイスからデータを取り出し、
-メモリに格納します。
+[Function]
+It retrieves data from the device connected by the I2C serial bus,
+Store it in memory.
 
-[ コマンド 書式 ]
-<返し値>=I2CR(<I2C アドレス>,<コマンド開始番地>,<コマンド長さ>,<読込メモリ開始番地>,<読込メモリ長さ>)
-<返し値>=I2CR(<I2C アドレス>,[<コマンド開始番地>,<コマンド長さ>,]<読込メモリ開始番地>,<読込メモリ長さ>) (1.2b42～)
+[Command format]
+<return value> = I2CR(<I2C address>, <command start address>, <command length>, <read memory start address>, <read memory length>)
+<return value> = I2CR(<I2C address>, [<command start address>, <command length>,> <read memory starting address>, <read memory length>) (1.2b42 ~)
 
-[ 例 ]
-R=I2CR(`1010000,#700,2,#702,16)
-R=I2CR(`1010000,#700,16) (1.2b42～)
+[Example]
+R = I2CR(`1010000,#700,2,#702,16)
+R = I2CR(`1010000,#700,16) (1.2 b 42 -)
 
-[ 解説 ]
-<I2C アドレス> は I2C 経由で情報を得るデバイスです。
-I2C デバイスには A0～A2 端子の接続に応じて
-固有のスレープアドレスを持ちます。これを指定します。
-値は 0～127（`0000 000 ～ `1111 111）です。
-これに READ/WRITE ビットの READ を付加し送信した後、
-デバイスからの受信を得ます。
-READ/WRITE ビットを含めない値になる事にご注意下さい。
+[Commentary]
+<I2C address> is a device that obtains information via I2C.
+Depending on the connection of the A0 to A2 terminals to the I2C device
+It has a unique slope address. Specify this.
+Values ​​range from 0 to 127 (`0000 000 to `1111 111).
+After adding the READ / WRITE bit READ to this and transmitting it,
+Gets reception from the device.
+Please note that it does not include the READ / WRITE bit.
 
-次に <コマンド開始番地> から <コマンド長さ> にある
-コマンドを実行します。
-コマンドは POKE で予め用意して下さい。
+Next from <command start address> to <command length>
+Execute the command.
+Prepare the command beforehand with POKE.
 
-その後 I2C から得たデータを <読込メモリ開始番地> から
-<読込メモリ長さ> で収納します。
-格納した情報は PEEK で実際の値を取得して下さい。
+After that, the data obtained from I2C is read from <read memory starting address>
+Store with <reading memory length>.
+Please obtain actual value with stored information by PEEK.
 
-<コマンド開始番地>  <読込メモリ開始番地> は
-IchigoJam のメモリの場所です。
-<コマンド長さ> <読込メモリ長さ> は
-バイト単位で長さを示します。
+<command start address> <read memory starting address> is
+IchigoJam's memory location.
+<command length> <read memory length> is
+Indicates the length in bytes.
 
-1.0.0 beta2 まで採用されていた I2C は
-1.0.0 beta3 ではこの I2CR と I2CW に変更されました。
-I2C を用いていたプログラムは変更するか、
-VER() を用いてコマンドを分けて下さい。
+I2C which had been adopted until 1.0.0 beta 2
+In 1.0.0 beta 3 this I2CR and I2CW have been changed.
+Change the program that used I2C,
+Please divide the command using VER().
 
-1.0.0 beta11 で Esc キーを押す事で
-受信の中断を行えるようになりました。
+By pressing the Esc key at 1.0.0 beta 11
+It is now possible to interrupt reception.
 
-1.2b42 より、<コマンド開始番地> <コマンド長さ> を
-省略できるようになりました。
-これによりコマンドに関係なく、
-任意のデータを受信できるようになりました。
+From 1.2b42, with <command start address> and <command length> 
+You can now omit it. Regardless of the command,
+It is now possible to receive arbitrary data.

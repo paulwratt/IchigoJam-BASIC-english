@@ -3,20 +3,21 @@ IchigoJam BASIC
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-この後に記載している内容を無視します。
+[Function]
+Ignore the contents described after this.
 
-[ コマンド 書式 ]
-REM <コメント>
+[Command format]
+REM <comment>
+'<comment>
 
-[ 例 ]
+[Example]
 REM START
-' START
+'START
 
-[ 解説 ]
-REM 以降の文字列はすべてコメント扱いとなり無視されます。
-: で区切ってコマンドを入れた場合もコメント扱いで無視です。
-これを用いて、一時的に実行しなくないコマンドに対し、
-頭に REM を入れて無視させる事が可能です。
+[Commentary]
+All character strings after REM are treated as comments and are ignored.
+Even if you enter a command separated by ":" it is treated as a comment and is ignored.
+By using this, for commands not to be temporarily executed,
+It is possible to put REM in the head and ignore it.
 
-REM の代わりに ' を使用する事ができます。
+You can use ' instead of REM.

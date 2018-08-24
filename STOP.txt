@@ -3,15 +3,15 @@ IchigoJam BASIC 1.0.2～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-プログラムの実行を停止します。
+[Function]
+Stop program execution.
 
-[ コマンド 書式 ]
+[Command format]
 STOP
 
-[ 例 ]
+[Example]
 STOP
 
-[ 解説 ]
-STOP がでてきたところで、プログラムの実行を停止します。
-CONT によって STOP した行から再度実行できます。
+[Commentary]
+When the STOP comes in, the program execution is stopped.
+You can run it again from the line you stopped by CONT.

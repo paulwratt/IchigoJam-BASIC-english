@@ -3,15 +3,15 @@ IchigoJam BASIC 0.9.9～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-POKE で書き換えたキャラクタフォントを初期化します。
+[Function]
+Initialize the character font rewritten with POKE.
 
-[ コマンド 書式 ]
+[Command format]
 CLP
 
-[ 例 ]
+[Example]
 CLP
 
-[ 解説 ]
-POKE で書き換えたキャラクタコード 224（#E0）～255（#FF）の
-フォントを初期状態へ戻します。
+[Commentary]
+Character codes 224 (#E0) to 255 (#FF) rewritten with POKE
+Returns the font to the initial state.

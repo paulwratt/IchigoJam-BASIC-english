@@ -1,45 +1,45 @@
 I2CW
 IchigoJam BASIC 0.9.9～
 IchigoJam BASIC RPi
-IchigoJam PC 非対応
+IchigoJam PC not compatible
 -----------------------------------------------------------
-[ 機能 ]
-メモリに入れている値を
-I2C シリアルバスで接続されたデバイスへ送ります
+[Function]
+The value put in memory
+It sends it to the device connected by the I2C serial bus
 
-[ コマンド 書式 ]
-<返し値>=I2CW(<I2C アドレス>,<コマンド開始番地>,<コマンド長さ>,<書込メモリ開始番地>,<書込メモリ長さ>)
-<返し値>=I2CW(<I2C アドレス>,[<コマンド開始番地>,<コマンド長さ>,]<書込メモリ開始番地>,<書込メモリ長さ>) (1.2b42～)
+[Command format]
+<return value> = I2CW(<I2C address>, <command start address>, <command length>, <write memory start address>, <write memory length>)
+<return value> = I2CW(<I2C address>, [<command start address>, <command length>,] <write memory start address>, <write memory length>) (1.2b42 ~)
 
-[ 例 ]
-R=I2CW(`1010000,#700,2,#702,16)
-R=I2CW(`1010000,#700,16) (1.2b42～)
+[Example]
+R = I2CW(`1010000,#700,2,#702,16)
+R = I2CW(`1010000,#700,16) (1.2 b 42 -)
 
-[ 解説 ]
-<I2C アドレス> は I2C 経由で情報を送るデバイスです。 
-I2C デバイスには A0～A2 端子の接続に応じて
-固有のスレープアドレスを持ちます。これを指定します。
-値は 0～127（`0000 000 ～ `1111 111）です。
-これに READ/WRITE ビットの WRITE を付加し送信します。
-READ/WRITE ビットを含めない値になる事にご注意下さい。
+[Commentary]
+<I2C address> is a device that sends information via I2C.
+Depending on the connection of the A0 to A2 terminals to the I2C device
+It has a unique slope address. Specify this.
+Values ​​range from 0 to 127 (`0000 000 to `1111 111).
+Add WRITE of READ / WRITE bit to this and transmit.
+Please note that it does not include the READ / WRITE bit.
 
-その後 <コマンド開始番地> から <コマンド長さ> にあるコマンド、
-<書込メモリ開始番地> から <書込メモリ長さ> にある
-データを送信します。
-<コマンド開始番地> <書込メモリ開始番地> は
-IchigoJam から渡す値を入れたメモリの場所です。
-<コマンド長さ> <書込メモリ長さ> はバイト単位で長さを示します。
-POKE で予め値を入れておいた後に I2CW でデータを送信します。
+After that, the command at <command length> from <command start address>
+From <writing memory starting address> to <writing memory length>
+Send the data.
+<command start address> <writing memory starting address> is
+This is the memory location containing the value to pass from IchigoJam.
+<command length> <write memory length> indicates the length in bytes.
+We will send the data in I2CW after putting in the value in advance with POKE.
 
-1.0.0 beta2 まで採用されていた I2C は
-1.0.0 beta3 では I2CR とこの I2CW に変更されました。
-I2C を用いていたプログラムは変更するか、
-VER() を用いてコマンドを分けて下さい。
+I2C which had been adopted until 1.0.0 beta 2
+For 1.0.0 beta 3 it was changed to I2CR and this I2CW.
+Change the program that used I2C,
+Please divide the command using VER().
 
-1.0.0 beta11 で Esc キーを押す事で
-送受の中断を行えるようになりました。
+By pressing the Esc key at 1.0.0 beta 11
+It is now possible to interrupt transmission and reception.
 
-1.2b42 より、<コマンド開始番地> <コマンド長さ> を
-省略できるようになりました。
-これによりコマンドとデータを分けずに
-送出できるようになりました。
+From 1.2b42, with <command start address> and <command length> 
+You can now omit it.
+This allows you to separate commands and data
+You can now send out.

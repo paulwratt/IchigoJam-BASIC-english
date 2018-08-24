@@ -1,21 +1,21 @@
 STR$
 IchigoJam BASIC 1.2.0～
 IchigoJam BASIC RPi
-IchigoJam PC 非対応
+IchigoJam PC not compatible
 -----------------------------------------------------------
-[ 機能 ]
-文字列を返します。
+[Function]
+Returns a string.
 
-[ コマンド 書式 ]
-STR$(<開始番地>[,<長さ>])
+[Command format]
+STR$(<start address> [, <length>])
 
-[ 例 ]
+[Example]
 PRINT STR$(A)
 PRINT STR$(M+5,3)
 
-[ 解説 ]
-<開始番地> を先頭アドレスとする文字列を出力します。
-通常は変数のみですが A+1 のような指定も可能です。
-A="ABCDE":PRINT STR$(A+2) とすると CDE が出力されます。 
-<長さ> で出力する文字数を指定できます。省略した場合は全て出力します。
-A="ABCDE":PRINT STR$(A+2,2) とすると CD が出力されます。
+[Commentary]
+Outputs a character string whose start address is <start address>.
+Normally it is only variable, but you can specify it like A+1.
+A="ABCDE":PRINT STR$(A+2) will output CDE.
+You can specify the number of characters to output with <length>. If omitted, all of them are output.
+A="ABCDE":PRINT STR$(A+2,2) will output CD.

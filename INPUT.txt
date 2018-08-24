@@ -3,29 +3,29 @@ IchigoJam BASIC 0.6～
 IchigoJam BASIC RPi
 IchigoJam PC 0.1 beta 6～
 -----------------------------------------------------------
-[ 機能 ]
-入力を促し、変数へ入れます。
+[Function]
+Prompt for input and put it in the variable.
 
-[ コマンド 書式 ]
-INPUT ["<文字列>",]<変数>
+[Command format]
+INPUT ["<string>",] <variable>
 
-[ 例 ]
-INPUT "ANS?",A
+[Example]
+INPUT "ANS?", A
 
-[ 解説 ]
-Enter(return) が入力されるまで数値の入力を促します。
-入力された数値は <変数> へ入ります。
-<文字列> がある場合は表示を行い、続けて入力となります。
-ない場合は ? を表示します。
+[Commentary]
+You will be prompted to enter a number until Enter (return) is entered.
+The entered numerical value enters <variable>.
+If there is <character string>, it will display and continue input.
+If there is not,? Is displayed.
 
-入力に数字以外の文字・記号を入れた場合はエラーになりませんが、
-頭に数字以外が入っている文字以降は（数字があっても）無視されます。
-頭に数字がない場合、何も入力されていない場合は 0 を返します。
+If a character or symbol other than numbers is entered in the input, it will not result in an error,
+After the letters other than numbers in the head are ignored (even if there are numbers).
+If there are no digits in the head, 0 is returned if nothing is entered.
 
-通常はキーボードからの入力を行いますが、
-シリアル接続を行っている場合は、シリアルからの入力を受け付けます。
+Normally you will enter from the keyboard,
+When serial connection is performed, input from serial is accepted.
 
-1.2 beta 3 より "" でくくる事で、文字列として扱われ、
-文字列の開始番地を返します。
-この番地は画面の位置 #900～#BFF で返すため、
-スクロールすると文字列を失う事にご注意下さい。
+From 1.2 beta 3 it is handled as a character string by enclosing with "",
+Returns the starting address of the string.
+Since this address is returned from the screen position #900 to #BFF,
+Please note that you lose the character string when scrolling.

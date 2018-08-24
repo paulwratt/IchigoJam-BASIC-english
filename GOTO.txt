@@ -3,15 +3,15 @@ IchigoJam BASIC
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-次に実行する行番号を指定します。
+[Function]
+Specify the line number to be executed next.
 
-[ コマンド 書式 ]
-GOTO <行番号>
+[Command format]
+GOTO <line number>
 
-[ 例 ]
+[Example]
 GOTO 10
 
-[ 解説 ]
-<行番号> で指定している行へ処理を移します。
-0.9.5 より <行番号> に計算式・変数などを用いる事が可能です。
+[Commentary]
+Transfer processing to the line specified by <line number>.
+From 0.9.5 it is possible to use calculation formulas, variables, etc. for <line number>.

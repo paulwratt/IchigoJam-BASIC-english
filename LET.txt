@@ -3,20 +3,20 @@ IchigoJam BASIC 0.7.6～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-変数・配列に値を入れます。
+[Function]
+Put values ​​in variables / arrays.
 
-[ コマンド 書式 ]
-LET <変数>,<数>
-<変数>=<数>
-LET [<配列>],<数>
-[<配列>]=<数>
-LET [<配列>],<数>,<数>,... (0.9.4～)
-<変数>="<文字列>" (1.2 beta 2～)
-LET <変数>,"<文字列>" (1.2 beta 2～)
-LET [<配列>],"<文字列>","<文字列>",... (1.2 beta 2～)
+[Command format]
+LET <variable>, <number>
+<variable> = <number>
+LET [<array>], <number>
+[<array>] = <number>
+LET [<array>], <number>, <number>, ... (0.9.4 -)
+<variable> = "<string>" (1.2 beta 2 ~)
+LET <variable>, "<string>" (1.2 beta 2 ~)
+LET [<array>], "<string>", "<string>", ... (1.2 beta 2 ~)
 
-[ 例 ]
+[Example]
 LET A,1
 A=1
 LET [0],0
@@ -24,18 +24,18 @@ LET [1],1,2,3,4,5
 A="ABC"
 LET B="BCD"
 
-[ 解説 ]
-<変数> はアルファベット1文字です。配列に値を入れる事もできます。
-IchigoJam の変数は数値・整数のみになっているため、
-<数> は整数となります。範囲は -32768～32767 です。
+[Commentary]
+<variable> is one alphabetic character. You can also put values ​​into the array.
+Because IchigoJam's variables are numeric and integer only,
+<number> is an integer. The range is from -32768 to 32767.
 
-LET を付けた表記の場合の区切りが , で
-省略した場合は = と異なっている事にご注意下さい。
+The delimiter in the notation with LET is ","
+Please note that it is different from "=" if omitted.
 
-LET で配列に入れる際、<数> を複数記載して
-複数の配列に入れる事ができます。0.9.4 から対応しています。
-LET [1],1,2,3,4,5 とした場合、[1]～[5] にそれぞれ 1～5 の値が入ります。
+When putting in an array with LET, write multiple <number>
+It can be put in multiple arrays. It corresponds from 0.9.4.
+In case of LET [1], 1, 2, 3, 4, 5, values ​​1 to 5 are entered in [1] to [5] respectively.
 
-1.2 beta 2 より文字列に対応しています。
-<変数> には文字列が入っている番地の先頭アドレスが入ります。
-通常これはプログラム領域 #C00～#FFF を返します。
+It corresponds to the character string from 1.2 beta 2.
+<variable> contains the start address of the address containing the character string.
+Normally this will return program area #C00 - #FFF.

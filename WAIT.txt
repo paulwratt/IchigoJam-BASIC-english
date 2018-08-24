@@ -3,29 +3,28 @@ IchigoJam BASIC
 IchigoJam BASIC RPi
 IchigoJam PC 0.1 beta 4～
 -----------------------------------------------------------
-[ 機能 ]
-一定時間処理を停止します。
+[Function]
+Stop processing for a certain period of time.
 
-[ コマンド 書式 ]
-WAIT <時間>
-WAIT <時間>[,<ディーブ>] (1.2 beta 7～)
+[Command format]
+WAIT <time>
+WAIT <time> [, <dive>] (1.2 beta 7 ~)
 
-[ 例 ]
+[Example]
 WAIT 60
 WAIT 60,0
 
-[ 解説 ]
-指定時間処理を停止させます。
-<時間> は NTSC 版では 60 で約 1 秒、 PAL 版では 50 で約 1 秒で、
-範囲は 1～32767 です。（日本では NTSC 版。PAL 版は 1.2.2 より）
-1.1 beta4 から追加された
-VIDEO のクロックダウンに影響を受けます。
-VIDEO 0,10 とした場合、WAIT 60 は約 10 秒となります。
+[Commentary]
+Stop processing for the specified time.
+<time> is about 1 second in NTSC version, about 1 second by 50 in PAL version,
+The range is from 1 to 32767. (NTSC version in Japan, PAL version is from 1.2.2)
+Added since 1.1 beta4, It is affected by VIDEO clock down.
+With VIDEO 0,10 then WAIT 60 will be about 10 seconds.
 
-1.2 beta 7 より <ディーブ> に 0 を入れる事で、
-消費電流を抑えメモリやピン状態は保持するディープスリープになります。
-IchigoJam BASIC RPi はディープスリープに対応していません。
+By putting 0 in <dive> from 1.2 beta 7,
+Suppresses current consumption and keeps memory and pin states deep sleep.
+IchigoJam BASIC RPi does not support Deep Sleep.
 
-1.2 beta 12 より <時間> にマイナスの値を入れる事で、
-走査線 ×-1 分の待ち状態となります。
--262 で 1 フレーム（1/69 秒）です。
+By putting a negative value at <time> from 1.2 beta 12,
+It will wait for scanning line × -1 minute.
+-262 is 1 frame (1/69 seconds).

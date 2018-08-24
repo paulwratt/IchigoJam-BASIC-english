@@ -1,34 +1,34 @@
 ﻿KBD
-IchigoJam BASIC 非対応
+IchigoJam BASIC not compatible
 IchigoJam BASIC RPi 1.2.0RPi～
-IchigoJam PC 非対応
+IchigoJam PC not compatible
 -----------------------------------------------------------
-[ 機能 ]
-キーボード配列を変更します。
+[Function]
+Change the keyboard layout.
 
-[ コマンド 書式 ]
-KBD <配列>
+[Command format]
+KBD <keyboard array>
 
-[ 例 ]
+[Example]
 KBD 1
 
-[ 解説 ]
-IchigoJam BASIC RPi 独自のコマンドです。
-LPC1114 による IchigoJam BASIC では
-キーボード配列を変更したい場合、
-ファームウェアを更新して下さい。
+[Commentary]
+IchigoJam BASIC RPi is a unique command.
+In IchigoJam BASIC by LPC 1114
+If you want to change the keyboard layout,
+Update the firmware.
 
-<配列> は次のとおりです。
+<keyboard array> is as follows.
 
-    0 英語(US)キーボード
-    1 日本語(JIS)キーボード
+    0 English (US) keyboard
+    1 Japanese (JIS) keyboard
 
-SD カードに入れるファイル keymap.txt で設定も可能です。
-また KBD コマンドで kapmap.txt は上書きされます。
-値は次のとおりです。
+It is also possible to set it with the file keymap.txt to put in the SD card.
+Also, kapmap.txt will be overwritten with the KBD command.
+Values ​​are as follows.
 
-    us 英語(US)キーボード
-    jp 日本語(JIS)キーボード
+    us English (US) keyboard
+    jp Japanese (JIS) keyboard
 
-このコマンドは IchigoJam BASIC RPi 専用で実装されています。
-IchigoJam 実機ではファームウェアでキーボード配列を変更します。
+This command is implemented exclusively for IchigoJam BASIC RPi.
+IchigoJam On the actual machine, change the keyboard layout with firmware.

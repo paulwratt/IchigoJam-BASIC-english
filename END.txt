@@ -3,17 +3,17 @@ IchigoJam BASIC
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-プログラムの実行を終了します。
+[Function]
+End program execution.
 
-[ コマンド 書式 ]
+[Command format]
 END
 
-[ 例 ]
+[Example]
 END
 
-[ 解説 ]
-プログラム中に記載する事で、プログラムの実行を終了させます。
-ダイレクトに記載した場合でも、エラーになりません。
+[Commentary]
+By describing it in the program, we end the execution of the program.
+Even if it is described directly, it will not result in an error.
 
-1.1 beta6 に限り、不具合により Syntax Error を発生します。
+Only with 1.1 beta 6, Syntax Error will be generated due to malfunction.

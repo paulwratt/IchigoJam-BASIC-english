@@ -1,4 +1,4 @@
-RETURN
+RTN
 IchigoJam BASIC
 IchigoJam BASIC RPi
 IchigoJam PC
@@ -7,12 +7,12 @@ IchigoJam PC
 It will return from last GOSUB next.
 
 [Command format]
-RETURN
 RTN (1.1.0 beta 1 ~)
+RETURN
 
 [Example]
-RETURN
 RTN (1.1.0 beta 1 ~)
+RETURN
 
 [Commentary]
 After executing the subroutine flying in GOSUB,
@@ -21,3 +21,5 @@ If RETURN is executed while GOSUB is not being used, an error occurs.
 
 Abbreviated RTN can be used from 1.1.0 beta 1.
 In 1.0.2 beta 10 to 11, the abbreviation was RT, but this has been abolished.
+
+RTN is an alias for RETURN.

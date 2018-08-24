@@ -1,52 +1,53 @@
 POKE
 IchigoJam BASIC 0.9.8～
 IchigoJam BASIC RPi
+IchigoJam PC not compatible
 -----------------------------------------------------------
-[ 機能 ]
-仮想アドレス領域に値を入れます。
+[Function]
+Put a value in the virtual address area.
 
-[ コマンド 書式 ]
-POKE <番地>,<値>[,<値>][,...]
+[Command format]
+POKE <address>, <value> [, <value>] [, ...]
 
-[ 例 ]
+[Example]
 POKE #E0*8,#FF
 POKE #E0*8,#FF,#81,#81,#81,#81,#81,#81,#FF
 POKE #700,#01,#1C,#00,#20,#40,#18,#01,#39,#FC,#D1,#70,#47
 
-[ 解説 ]
-<番地> は #700～#FFF、<値> は #00～#FF で、
-<値> は連続して記載が可能です。
+[Commentary]
+<address> is #700 to #FFF, <value> is #00 to #FF,
+<value> can be described consecutively.
 
-下記は 0.9.9-RC6 以降で有効になります。
-それ以前ではキャラクターパターンなど一部が有効です。
+The following are valid in 0.9.9 - RC 6 or later.
+Some characters such as character patterns are effective before that.
 
-キャラクターパターンの変更は <番地> #700～#7FF で対応します。
-（#000～#6FF は変更できません）
-キャラクターコード 224（#E0）～255（#FF）を変更できます。
-キャラクターコード番号×8から8つの番地（+0～+7）が1文字で構成されます。
-番地の若い順に上から入っています。
+Changes to the character pattern correspond with <address> #700 to #7FF.
+(You can not change #000 to #6 FF)
+You can change character codes 224 (#E0) to 255 (#FF).
+Eight addresses (+0 to +7) are composed of one character from character code number ×8.
+I entered from the top in the order of the youngest of the numbers.
 
-配列および変数が <番地> #800～#8FF に対応します。
-下位8ビット・上位8ビットの順で、一番上位のビットが符号ビットです。
-#800～#801 が [0]、#802～#803 が [1] ……とつづき、#8CA～#8CB の [101] まで、
-つづいて #8CC～#8CD が変数 A から変数がつづき、#8FE～#8FF の変数 Z となります。
+Arrays and variables correspond to <address> #800 to #8FF.
+The most significant bit is the sign bit in the order of the lower 8 bits and the upper 8 bits.
+Continuing from #800 to #801 for [0], #802 to #803 for [1] ..., up to [101] for #8CA to #8CB,
+Subsequently, variables #8CC to #8CD are from variable A and become variable Z for #8FE to #8FF.
 
-画面表示のキャラクターが #900～#BFF に対応します。
-#900 が横座標 0、縦座標 0 のキャラクターコード、そこから横につづき、
-#BFF の横座標 31、縦座標 23 までです。
-IchigoJam BIG は #900～#9BF で #9BF の横座標 15、縦座標 11 までです。
-この領域を更新する場合、PRINT とは異なり、シリアルには出力されません。
+The screen display character corresponds to #900 to #BFF.
+#900 is a character code with abscissa 0 and ordinate 0, followed by the character code,
+It is up to the abscissa (x-axis) 31 and the ordinate (y-axis) 23 of #BFF.
+IchigoJam BIG is #900 to #9BF and has abscissa 15 and ordinate 11 of #9BF.
+Unlike PRINT, when updating this area, it will not be output serially.
 
-プログラムが #C00～#FFF に対応します。
-行番号 2 番地分(下位8ビット・上位8ビットの順)、
-文字数 1 番地分(終了コード 0 を含む) の後
-行番号を除いたプログラムそのものが入ります。
-行の終了コードとして 0 が入ります。
-次の番地が奇数の場合はもう1バイト 0 を入れ、
-行番号は偶数の番地になるようにします。
+The program corresponds to #C00 - #FFF.
+Line number 2 address (lower 8 bits, upper 8 bits in this order),
+After character number 1 address (including end code 0)
+The program itself excluding the line number is entered.
+0 is entered as the end code of the line.
+If the next address is an odd number, enter 1 byte 0 again,
+The line number should be an even number.
 
-マシン語も対応しています。USR で実行できます。
-領域は変更できるキャラクタパターン、配列・変数、
-プログラムの空き領域部分を用いて下さい。
-IchigoJam PC は CPU が異なるため、USR は使用できませんが、
-POKE は使用可能です。
+Machine language is also supported. It can be executed with USR.
+Region can be changed character pattern, array / variable,
+Please use the free space part of the program.
+IchigoJam PC is different CPU, so USR can not be used,
+POKE is not available.

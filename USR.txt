@@ -1,62 +1,67 @@
 USR
 IchigoJam BASIC 0.9.8～
 IchigoJam BASIC RPi 1.2b16RPi～・1.2.5RPi～
-IchigoJam PC 非対応
+IchigoJam PC not compatible
 -----------------------------------------------------------
-[ 機能 ]
-マシン語を呼び出します。
+[Function]
+Call machine language.
 
-[ コマンド 書式 ]
-USR(<アドレス>,<値>)
+[Command format]
+USR(<address>, <value>)
+USR(<address>, <value>, <character pattern>) (1.1 beta 6 ~)
+USR(<address>, <value>, <character pattern>, <character pattern top>) (1.1 beta 10 ~)
 
-[ 例 ]
-?USR(#700,100)
+[Example]
+? USR(#700,100)
 
-[ 解説 ]
-<アドレス> 番地からマシン語を実行します。
-<値> は 第1パラメータ（マシン語から R0 レジスタ）で取得できます。
-R0 レジスタの値を返し値として返しますので、
-LET や PRINT で使用する事が可能です。
-C でつくる場合は 第1パラメータ で取得し、return で返すようにできます。
+[Commentary]
+Execute machine language from <address> address.
+<value> can be acquired from the first parameter (machine language to R0 register).
+Since the value of the R0 register is returned as the return value,
+It is possible to use it with LET or PRINT.
+In case of making with C you can get it with the first parameter and return it with return.
 
-1.1 beta6 より第2パラメータ（R1 レジスタ）として
-仮想メモリの先頭ポインタ（#000 部の該当アドレス）を渡します。
-ただしこの値は変更できないキャラクターパターンの仮想アドレス
-#000～#6FF 部分が実際には存在しません。#700 以降が有効です。
+From 1.1 beta 6 as the second parameter (R1 register)
+Pass the start pointer of virtual memory (corresponding address of #000 part).
+However, this value can not be changed Virtual address of <character pattern>
+The #000 to #6FF part actually does not exist. # 700 or later is valid.
 
-1.1 beta10 より第3パラメータ（R2 レジスタ）として
-キャラクターパターンの先頭アドレス（#000 部の該当アドレス）を渡します。
-こちらは #000～#6FF が有効です。
+From 1.1 beta 10 as the third parameter (R2 register)
+Pass the top address of the <character pattern> (corresponding address of #000 part).
+Here, #000 to #6FF is effective.
 
-1.1 beta5 まで
+Up to 1.1 beta 5
 
-    int16_t sample(int16_t val) {
+    int16_t sample (int16_t val) {
 
-        /* メイン */
-
-        return val;
-    }
-
-1.1 beta6 以降
-
-    int16_t sample(int16_t val, char* mem) {
-
-        /* メイン */
+        /* Main */
 
         return val;
     }
 
+1.1 beta 6 or later
 
-マシン語を置く場所は
-・#700～#7FF キャラクターパターンの変更
-・#800～#8FF 配列・変数
-・#C00～#FFF プログラム本体（1.1 beta10～）
-が使えます。
+    int16_t sample (int16_t val, char * mem) {
 
-CHR$(224) 以降のキャラクタや配列・変数、
-プログラムそのものを破壊する事にご注意下さい。
+        /* Main */
 
-IchigoJam BASIC と IchigoJam BASIC RPi（Raspberry Pi）では
-CPU の違いにより異なるところがあります。
+        return val;
+    }
 
-IchigoJam PC は動作しません。Syntax Error を返します。
+
+Where to place machine language
+· #700 to #7FF Changing character pattern
+· #800 to #8FF array and variable
+· #C00 to #FFF program body (1.1 beta 10 ~)
+You can use.
+
+Characters and arrays / variables after CHR$(224)
+Please be careful to destroy the program itself.
+
+IchigoJam BASIC and IchigoJam BASIC RPi (Raspberry Pi)
+There are differences depending on CPU's difference.
+
+IchigoJ amd RPi A/A+/B/B+/0/0+W support Thumb
+RPi 2B+/3/3+ support Thumb 2
+
+IchigoJam PC does not work. It returns Syntax Error.

@@ -3,45 +3,45 @@ IchigoJam BASIC
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-押されている文字を返します。
+[Function]
+Returns the character being pressed.
 
-[ コマンド 書式 ]
+[Command format]
 INKEY()
 
-[ 例 ]
+[Example]
 PRINT INKEY()
 
-[ 解説 ]
-押されているキーボードの文字コードを返します。
-押されていなければ 0 を返します。
+[Commentary]
+Returns the character code of the keyboard being pressed.
+If it is not pressed, 0 is returned.
 
-1.2 beta 19 よりシリアルより CHR$(0) を得た場合、
-256（#100）を返します。
+1.2 If beta 19 gets CHR$(0) from serial,
+It returns 256 (#100).
 
-他機種では INKEY$ として返し値は文字そのものを返しますが、
-IchigoJam では変数は数値となっているため、コードになっています。
-文字を使いたい場合は ASC を併用して下さい。
+In other models, the return value as INKEY$ returns the character itself,
+In IchigoJam, variables are numbers, so they are in code.
+If you want to use letters please use ASC together.
 
-10 I=INKEY():IF I<>ASC("0") GOTO 10
+10 I=INKEY(): IF I<>ASC("0") GOTO 10
 
-例えば上記は 0 キーが押されるまで（シリアルより 0 を得るまで）待ちます。
+For example above, wait until 0 key is pressed (until you get 0 from serial).
 
-特殊コードは次のとおりです。
+The special codes are as follows.
 
-    10        Enter (return)
-    28・LEFT  ← (左)
-    29・RIGHT → (右)
-    30・UP    ↑ (上)
-    31・DOWN  ↓ (下)
+    10 · Enter (return)
+    28 · LEFT ← (left)
+    29 · RIGHT → (right)
+    30 · UP ↑ (upper)
+    31 · DOWN ↓ (bottom)
 
-10 I=INKEY():IF I<>10 GOTO 10
+10 I = INKEY(): IF I<>10 GOTO 10
 
-上記は Enter キーが押されるまで待ちます。
+Wait for the above until Enter key is pressed.
 
-連続したキー入力はキーバッファに貯められ、INKEY() で順次取り出されます。
-長押ししている場合はオートリピートが有効です。
-ゲームの操作用途ではこれが意図しない動作になる場合があります。
-CLK を用いてキーバッファのクリアが可能です。CLK を参照して下さい。
-また、INKEY() の代わりに BTN(値) を用いる事で
-キーバッファに影響されない現在のキー状態を得られます。BTN をご参照下さい。
+Successive key inputs are stored in the key buffer and sequentially fetched by INKEY().
+Auto-repeat is effective when long pressed.
+For game operation purposes this may result in unintended behavior.
+The key buffer can be cleared using CLK. See CLK.
+Also, by using BTN(<value>) instead of INKEY()
+You can get the current key state unaffected by the key buffer. Please refer to BTN.

@@ -7,12 +7,12 @@ IchigoJam PC
 Transfer processing to subroutine.
 
 [Command format]
-GOSUB <line number>
 GSB <line number> (1.1.0 beta 1 ~)
+GOSUB <line number>
 
 [Example]
-GOSUB 100
 GSB 100 (1.1.0 beta 1 ~)
+GOSUB 100
 
 [Commentary]
 Transfer processing to the line specified by <line number>.

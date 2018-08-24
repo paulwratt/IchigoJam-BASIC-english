@@ -1,26 +1,26 @@
 ﻿IoT.IN
 IchigoJam BASIC 1.2b57 IoT
 IchigoJam BASIC RPi 1.2b21RPi・1.2.5RPi
-IchigoJam PC 非対応
+IchigoJam PC not compatible
 -----------------------------------------------------------
-[ 機能 ]
-sakura.io モジュールからデータを受信します。
+[Function]
+Receive data from sakura.io module.
 
-[ コマンド 書式 ]
+[Command format]
 IoT.IN()
 
-[ 例 ]
+[Example]
 A=IoT.IN()
 
-[ 解説 ]
-sakura.io モジュールの
-データ受信コマンド（Q=#30）を用いて
-受信キュー先頭にあるデータを得ます。
-応答データのうち ch は無視され全てのデータを受け取り、
-D(0) を下位バイト、D(1) を上位バイトとした値を返します。
+[Commentary]
+of sakura.io module
+Using the data reception command (Q=#30)
+Get the data at the head of the receive queue.
+The channel of the response data is ignored and all data are received,
+Returns the value with D(0) as the lower byte and D(1) as the upper byte.
 
-IoT 版は IoT.OUT を実行すると
-仮想メモリ領域 #800 以降を
-データ送出コマンド生成に使用します。
-この領域は配列で使用されているため、
-配列の一部が破損しますのでご注意下さい。
+IoT version executes IoT.OUT
+Virtual memory area #800 or later
+It is used for data transmission command generation.
+Since this region is used in an array,
+Please note that part of the array will be damaged.

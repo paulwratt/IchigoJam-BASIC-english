@@ -1,0 +1,24 @@
+constants
+IchigoJam BASIC
+IchigoJam BASIC RPi
+IchigoJam PC
+-----------------------------------------------------------
+[Function]
+Constant Variables.
+
+[Command format]
+SCROLL() - UP, DOWN, LEFT, RIGHT are supported from 1.0.0 beta 7.
+    0 · UP = up
+    1 · RIGHT = right
+    2 · DOWN = down
+    3 · LEFT = left
+
+BTN() - 0 SPACE UP DOWN LEFT RIGHT
+    0 · 0 = button key (if it exists)
+    0 · UP = up arrow
+    2 · DOWN = down arrow
+    1 · RIGHT = right arrow
+    3 · LEFT = left arrow
+    3 · SPACE = space bar
+
+[Commentary]

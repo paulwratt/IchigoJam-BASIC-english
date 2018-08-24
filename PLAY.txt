@@ -3,54 +3,59 @@ IchigoJam BASIC 0.9.0～
 IchigoJam BASIC RPi 1.2b17RPi～・1.2.5RPi～
 IchigoJam PC 0.1 beta 11～
 -----------------------------------------------------------
-[ 機能 ]
-音を演奏します。
+PLAY
+IchigoJam BASIC 0.9.0 -
+IchigoJam BASIC RPi 1.2 b 17 RPi ~ - 1.2.5 RPi -
+IchigoJam PC 0.1 beta 11 ~
+---------------------------------------------------------
+[Function]
+It play the sound.
 
-[ コマンド 書式 ]
+[Command format]
 PLAY "<MML>"
-PLAY <開始番地> (1.2 beta 3～)
+PLAY <start address> (1.2 beta 3 ~)
 
-[ 例 ]
+[Example]
 PLAY "CDE2CDE2"
-PLAY A (1.2 beta 3～)
+PLAY A (1.2 beta 3 ~)
 
-[ 解説 ]
-<MML> は次のとおりです。1.2 beta 2 までは 128 文字まで有効です。
+[Commentary]
+<MML> = Music Macro Language, is as follows. Up to 128 characters are allowed up to 1.2 beta 2.
 
-A～G      音符 (ド～シが CDEFGAB に対応)
- +        半音上げる (高い音程の効果なし)
- #        半音上げる (1.2 beta 10 より。高い音程の効果なし)
- -        半音下げる (高い音程の効果なし)
-R         休符
- <長さ>   長さ (1・2・4・8・16・32。音の後に付ける C4 D1)
- .        長さの半分伸ばす (長さの後に付ける E2.)
-T<テンポ> 初期値は 120。コマンド TEMPO でも指定可能
-L<長さ>   省略時の長さ。初期値は 4
-O<オクターブ> 1～5（1.0.0 beta6～8 は 0～9）、
-              初期値は 4（1.2 beta 10 より 3）
-> (1.2 beta 9 まで) 
-< (1.2 beta 10 より)
-          1オクターブ上げる
-< (1.2 beta 9 まで)
-> (1.2 beta 10 より) 
-          1オクターブ下げる
-$         ここから後の MML を繰り返す
-N<高さ>   音を出す。BEEP と共通
+A to G note (corresponding to CDEFGAB)
+ + Increase semitone (no high pitch effect)
+ # Increase by a half tone (1.2 beta 10 more than high pitch effect is not available)
+ - Lower a semitone (no high pitch effect)
+R rest
+ <length> length (1 · 2 · 4 · 8 · 16 · 32. attached after the note C4D1)
+. Half the length (attach after the length E2.)
+T <tempo> The initial value is 120. Can also be specified with command TEMPO
+L <length> default length. The initial value is 4
+O <Octave> 1 to 5 (1.0.0 beta 6 to 8 are 0 to 9),
+              The initial value is 4 (3 from 1.2 beta 10)
+> (Up to 1.2 beta 9)
+<(From 1.2 beta 10)
+          Increase by 1 octave
+<(Up to 1.2 beta 9)
+> (From 1.2 beta 10)
+          Lower one octave
+$ Repeat MML from here on
+N <height> Sounds sound. Common to BEEP
 
-音域は O1C～O5D の範囲です。(1.2 beta 10 より O1C～O5B）
+The range is from O1C to O5D. (O1C to O5B from 1.2 beta 10)
 
-1.0.0 beta5 より、バッファが変更されていますが、
-ダイレクトモードでは他のコマンドを実行する時に再生が停止します。
+Since 1.0.0 beta 5, the buffer has been changed,
+In direct mode, playback stops when another command is executed.
 
-音を出すためには圧電サウンダを SOUND と GND に接続します。
-2014年5月～2015年1月頃に発送された IchigoJam では
-SOUND 端子は EX2 と記載されています。
-1.0.0 beta6～8 は SOUND・EX2 端子と OUT5・EX3 端子が交換されていましたが、
-1.0.0 beta9 で戻されました。
+Connect a piezoelectric sounder to SOUND and GND to produce sound.
+In IchigoJam shipped in May 2014 - January 2015
+The SOUND terminal is described as EX2.
+For 1.0.0 beta 6 ~ 8, SOUND and EX 2 terminal and OUT 5 / EX 3 terminal were exchanged,
+It was returned in 1.0.0 beta9.
 
-1.2 beta 3 より <開始番地> を指定できます。
-これは通常変数で、MML を文字列に入れた開始番地です。
-また、1.2 beta 3 より文字数の制限はなくなっています。
+From <beta 3> <start address> can be specified.
+This is usually a variable, starting address where MML is put in the string.
+Also, the limit of the number of characters from 1.2 beta 3 is gone.
 
-IchigoJam BASIC RPi では 1.2b17RPi・1.2.5RPi より対応しています。
-圧電サウンダを物理 PIN 29 と GND に接続します。
+IchigoJam BASIC RPi supports 1.2b17RPi and 1.2.5RPi.
+Connect the piezoelectric sounder to physical PIN 29 and GND.

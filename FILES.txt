@@ -3,86 +3,86 @@ IchigoJam BASIC 1.0.0～
 IchigoJam BASIC RPi
 IchigoJam PC 0.1 beta 5～
 -----------------------------------------------------------
-[ 機能 ]
-プログラム一覧を表示します。
+[Function]
+The program list is displayed.
 
-[ コマンド 書式 ]
-FILES [[<開始ファイル番号>,]<終了ファイル番号>] (1.1.0～)
-FILES [<最大ファイル数>] (～1.0.2)
+[Command format]
+FILES [[<start file number>,] <end file number>] (1.1.0 -)
+FILES [<Maximum number of files>] (~ 1.0.2)
 
-[ 例 ]
+[Example]
 FILES
-FILES 0,163 (1.1 beta～)
-FILES 68 (～1.0.2)
+FILES 0, 163 (1.1 beta ~)
+FILES 68 (~ 1.0.2)
 
-[ 解説 ]
-IchigoJam 本体、EEPROM が接続されている場合は EEPROM も含めて
-プログラムを一覧表示します。
+[Commentary]
+IchigoJam main unit, including EEPROM when EEPROM is connected
+List the programs.
 
-存在しているプログラム番号の後に、
-プログラムの先頭行にあるコマンド以降の文字を表示します。
-' でコメントを入れておくとコメントが表示されるので便利です。
+After the existing program number,
+It displays characters after the command in the first line of the program.
+'If you put a comment in the comment will be displayed so it is convenient.
 
-EEPROM は 512K・1024K ビットの場合は
-一部の EEPROM を除いて完全に表示します。
-32K～256K ビットでは同じプログラムを
-複数のプログラム番号で表示する事にご注意下さい。
-16K ビット以下の EEPROM は I2C のアクセスに違いがあるため、
-プログラム保存に使用する事ができません。
-
-
-1.0.1・1.0.2 (beta 12 を含む) では
-ファイル数の <最大ファイル数> を設定できるようになりました。
-1.1 beta (1.0.2 beta 11 まで含む) からは
-<開始ファイル番号> から <終了ファイル番号> までの範囲でファイルを表示します。
-FILES のみは本体のみを表示し、FILES 0 で EEPROM も含めて全てを表示します。
-, を外して <終了ファイル番号> のみの指定も可能です。
-FILES 110 で FILES 0,110 と同じになります。
+In the case of EEPROM of 512 K and 1024 K bits
+Except for some EEPROMs, they are displayed completely.
+For the 32K to 256K bits the same program
+Please be careful to display with multiple program numbers.
+Because there is a difference in the access of I2C for EEPROM of 16 K bit or less,
+It can not be used for saving programs.
 
 
-1.0.1・1.0.2 beta では、
-全てファイルが存在する場合に表示できる最大ファイル数を指定します。
-8 の場合は 0～3 と 100～103 で最大 8 ファイルとなります。
-具体的には下記のとおりです。
-
-     8 = 103 まで (32K ビット)
-    12 = 107 まで (64K ビット)
-    20 = 115 まで (128K ビット)
-    36 = 131 まで (256K ビット)
-    68 = 163 まで (512K ビット)
-     0  = 全て表示
-
-22、44、66 として1ページ、2ページ、3ページという表示も可能です。
-
-ファイルがない場合は非表示になりますが、
-これもカウントされるため、
-指定したファイル数より少なく表示される場合がある事にご注意下さい。
+1.0.1 · 1.0.2 (including beta 12)
+<maximum number of files> can be set for the number of files.
+From 1.1 beta (including 1.0.2 beta 11)
+The file is displayed in the range from <start file number> to <end file number>.
+For FILES only, display only the main body, FILES 0 will show everything including EEPROM.
+, You can also specify only <end file number> without removing.
+FILES 110 will be the same as FILES 0, 110.
 
 
-1.1 beta からの範囲指定では、下記のとおりで理想的な表示を行います。
-（512K 以下は A2=GND 接続を前提とした場合）
+For 1.0.1 · 1.0.2 beta,
+Specify the maximum number of files that can be displayed when all files exist.
+For 8, it is 0 to 3 and 100 to 103, it is a maximum of 8 files.
+Specifically, it is as follows.
 
-    本体のみ    = FILES     または FILES 0,3
-     32K ビット = FILES 103 または FILES 0,103
-     64K ビット = FILES 107 または 0,107
-    128K ビット = FILES 115 または 0,115
-    256K ビット = FILES 131 または 0,131
-    512K ビット = FILES 163 または 0,163
-    全て表示    = FILES 0   または FILES 0,227
+     8 = 103 (32 Kbits)
+  9~12 = 107 (64 Kbits)
+    20 = 115 (128 Kbits)
+    36 = 131 (256 Kbits)
+    68 = Up to 163 (512 Kbits)
+     0 = Show all
+
+You can also display 1 page, 2 page, 3 page as 22, 44, 66.
+
+If there is no file, it will be hidden,
+Since this is also counted,
+Please be aware that it may be displayed less than the specified number of files.
 
 
-1.2.3 までは FILES 0,0 は FILES 0 と同じ扱いにあり、全て表示します。
-1.2.4・1.2b56・1.2b20RPi より、
-FILES 0,0 はプログラム番号 0 のみを表示します。
-IoT 対応版は 1.2b59 IoT より FILES の場合 0 のみを表示します。
+In the range designation from 1.1 beta, Ideal display is made as follows.
+(When 512K or less is assumed for A2 = GND connection)
+
+    Body only = FILES or FILES 0, 3
+     32 Kbits = FILES 103 or FILES 0, 103
+     64 Kbits = FILES 107 or 0, 107
+    128 Kbits = FILES 115 or 0, 115
+    256 Kbits = FILES 131 or 0, 131
+    512 Kbits = FILES 163 or 0, 163
+    All Display = FILES 0 or FILES 0, 227
 
 
-IchigoJam PC は 227 まで表示しようとしますが、
-実際に使えるのは 0～3 のみです。
+FILES 0, 0 are treated the same as FILES 0 until 1.2.3, and all are displayed.
+1.2.4 · 1.2b56 · 1.2b20 From RPi,
+FILES 0 and 20 only show program number 0.
+For IoT compatible version, only 0 is displayed in case of FILES from 1.2b59 IoT.
 
-IchigoJam BASIC RPi は 1.2b15RPi・1.2.4RPi まで 0～3 および 100～227 です。
-(micro)SD メモリーカードの files ディレクトリ内ファイルを参照します。
-1.2b16RPi・1.2.5RPi より 0～227 となりました。
-0～99 は SD メモリカード、100～227 は EEPROM を参照します。
-省略した場合、1.2.4RPi および 1.2b19RPi までは FILES 0,3 に同じ、
-1.2b20RPi および 1.2.5RPi 以降は FILES 0,20 に同じです。
+
+IchigoJam PC tries to display up to 227,
+Actually you can only use 0 to 3.
+
+IchigoJam BASIC RPi is 0 to 3 and 100 to 227 to 1.2b15 RPi and 1.2.4 RPi.
+(micro) Refer to the file in the files directory of the SD memory card.
+It became 0 to 227 from 1.2b16 RPi and 1.2.5 RPi.
+0 to 99 are SD memory cards, 100 to 227 refer to EEPROM.
+If omitted, the same applies to FILES 0 and 3 up to 1.2.4 RPi and 1.2b19 RPi,
+For 1.2b20 RPi and 1.2.5 RPi and later, FILES 0 and 20 are the same.

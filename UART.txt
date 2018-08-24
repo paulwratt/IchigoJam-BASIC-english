@@ -3,49 +3,47 @@ IchigoJam BASIC 1.1.0～
 IchigoJam BASIC RPi
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-シリアルへの出力を設定します
+[Function]
+Set the output to serial
 
-[ コマンド 書式 ]
-UART <モード1>
-UART <モード1>[,<モード2>] (1.1 beta13～)
+[Command format]
+UART <mode 1>
+UART <mode 1> [, <mode 2>] (1.1 beta 13 ~)
 
-[ 例 ]
+[Example]
 UART 0
 UART 1,0
 
-[ 解説 ]
-<モード1> は次のとおりです。
-起動時のデフォルトは
-IchigoJam BASIC・IchigoJam BASIC RPi では 2、
-IchigoJam PC では 0 です。
+[Commentary]
+<mode 1> is as follows. The startup default is 2
+for IchigoJam BASIC and IchigoJam BASIC RPi,
+It is 0 in IchigoJam PC.
 
-    0 出力を行わない
-    1 PRINT のみ出力を行う。改行コード LF
-        1.0 以前の動作に近い出力となります。
-        1.1 beta6 では UART 3 と同じ動作になります。
-        1.1 beta7 では従来仕様に戻されています。
-    2 PRINT・LOCATE・CLS・SCROLL の出力を行う。改行コード LF
-        コマンドに応じて次のコードを出力します。
-        LOCATE   → CHR$(#15,#20+<X座標>,#20+<Y座標>)
-        CLS      → CHR$(#13,#0C)
-        SCROLL   → CHR$(#15,<カーソル方向>)
-                    <カーソル方向>=#1C 左・#1D 右・#1E 上・#1F 下
-    3 PRINT のみ出力を行う。改行コード CR+LF、バッファ付
-        1.1 beta7 より有効です。
+    0 Do not output
+    1 Print only PRINT. Line feed code LF
+        It will be close to the behavior before 1.0.
+        In 1.1 beta 6 it works the same as UART 3.
+        1.1 beta 7 has been restored to the previous specification.
+    2 Outputs for PRINT, LOCATE, CLS, SCROLL. Line feed code LF
+        Output the following code according to the command.
+        LOCATE → CHR$(#15,#20+<X coordinate>,#20+<Y coordinate>)
+        CLS → CHR$(#13,#0C)
+        SCROLL → CHR$(#15,<cursor direction>)
+            <cursor direction> is #1C=left, #1D=right, #1E=up, #1F=down
+    3 Output only PRINT. Line feed code CR+LF, with buffer
+        It is more effective than 1.1 beta 7.
 
-シリアル信号に応じて制御する機器（PanCake など）・アプリでは、
-UART を実行し、IchigoJam からの送出を変更する必要があります。
+Devices that control according to serial signals (such as PanCake) and In applications,
+It is necessary to execute UART and change the sending from IchigoJam.
 
-1.1 beta13 より <モード2> に対応しています。
-次のとおりです。
-起動時のデフォルトは
-IchigoJam BASIC・IchigoJam BASIC RPi では 1、
-IchigoJam PC では 0 です。
+It corresponds to <mode 2> from 1.1 beta13.
+It is as follows. The startup default is 1
+for IchigoJam BASIC and IchigoJam BASIC RPi,
+It is 0 in IchigoJam PC.
 
-    0 シリアルからの送出を無視
-    1 通常動作 (記載以外の数値を指定した場合も有効)
-    2 ESC キーを無視
-      これにより、シリアルより ESC コードが送出された場合に
-      プログラムが停止されてしまうのを防ぎます。
-    4 CR を LF に変換 (1.2 beta 41～)
+    0 Ignore sending from serial
+    1 Normal operation (Valid when numerical values ​​other than described are specified)
+    2 Ignore the ESC key
+      Thus, when the ESC code is transmitted from the serial
+      It prevents the program from being stopped.
+    4 Convert CR to LF (1.2 beta 41 ~)

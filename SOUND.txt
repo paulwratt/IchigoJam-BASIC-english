@@ -3,17 +3,17 @@ IchigoJam BASIC 1.0.0～
 IchigoJam BASIC RPi 1.2.5RPi～
 IchigoJam PC 0.1 beta 11～
 -----------------------------------------------------------
-[ 機能 ]
-音の出力有無を検出します。
+[Function]
+Detects the presence or absence of sound output.
 
-[ コマンド 書式 ]
+[Command format]
 SOUND()
 
-[ 例 ]
+[Example]
 50 IF SOUND() GOTO 50
 
-[ 解説 ]
-音を発生している時は 1、出していない時は 0 を返します。
+[Commentary]
+It returns 1 when sound is generated, and 0 when it is not output.
 
-ダイレクトモードではコマンド実行で再生が停止しますが、
-その時再生されていた場合は SOUND で検出できます。
+In direct mode, playback stops by command execution,
+If it was being played then you can detect it with SOUND.

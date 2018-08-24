@@ -3,61 +3,61 @@ IchigoJam BASIC 0.9.4～
 IchigoJam BASIC 1.2b17RPi～・1.2.5RPi～
 IchigoJam PC
 -----------------------------------------------------------
-[ 機能 ]
-画面出力の表示・非表示を行います。
+[Function]
+Display / hide the screen output.
 
-[ コマンド 書式 ]
-VIDEO <表示> (～1.1 beta3・RPi)
-VIDEO <表示>[,<クロックダウン>] (1.1 beta4～)
+[Command format]
+VIDEO <display> (~ 1.1 beta 3 · RPi)
+VIDEO <display> [, <clock down>] (1.1 beta 4 ~)
 
-[ 例 ]
+[Example]
 VIDEO 0
 VIDEO 0,10
 
-[ 解説 ]
-<表示> で、ビデオ端子へ出力の表示・非表示を設定します。
-0 で非表示、1 で表示です。
-非表示では、線画での処理速度を他の処理へ回せるため
-速く処理・線画する事ができるようになります。
-ダイレクトモードでも VIDEO 0 は有効ですが、
-入力が一切見えなくなる事にご注意下さい。
-VIDEO 1 にして表示を行う事ができます。
+[Commentary]
+In <display>, set display / non-display of output to the video terminal.
+0 is hidden, 1 is displayed.
+In non-display, in order to turn processing speed in line drawing to other processing
+It will be able to process and line drawing faster.
+VIDEO 0 is valid even in direct mode,
+Please be aware that input will be invisible at all.
+You can display with VIDEO 1.
 
-1.1 beta4 よりクロックダウンを行う事ができます。
-速度を遅くする事で消費電力を下げる事ができます。
-<クロックダウン> の 1 がデフォルトで 48MHz、
-2 が2分の1、3が3分の1 で、最大値は 255 です。
-TICK()・WAIT の値も影響も受けます。
-10 で設定した場合、TICK()・WAIT が 60 になるのは約 10 秒になります。
+You can do clock down from 1.1 beta4.
+By lowering the speed it is possible to lower power consumption.
+1 of <clock down> is 48 MHz by default,
+2 is 1/2, 3 is 1/3, and the maximum value is 255.
+The value of TICK() · WAIT is also affected.
+If set with 10, it will be about 10 seconds for TICK() · WAIT to be 60.
 
-1.2 beta 9 より <表示> に 2 が追加されています。
-ビデオ出力の白黒を反転表示します。表示領域内が反転されます。
-この効果は全画面が変化する効果となるため、
-多用すると悪影響を及ぼす可能性があります。
-特に点滅を連続して行わせないようにして下さい。
+1.2 Since beta 9, 2 has been added to <display>.
+Highlight the monochrome of the video output. The display area is flipped.
+Since this effect has the effect of changing the entire screen,
+There is a possibility that it may have a bad influence if it is heavily used.
+Please do not make flashing continuously in particular.
 
-1.2 beta 34-5 より <表示> に 3～8 が追加されています。
-拡大表示に対応しています。次のとおりとなっています。
+1.2 beta 3 - 8 has been added to <display> from 34-5.
+It corresponds to enlarged display. It is as follows.
 
-  ・0    非表示
-  ・1～2 1 倍 (32×24)
-  ・3～4 2 倍 (16×12)
-  ・5～6 4 倍 ( 8× 6)
-  ・7～8 8 倍 ( 4× 3)
+  · 0 hidden
+  · 1 to 2   1 times (32 × 24)
+  · 3 to 4   2 times (16 × 12)
+  · 5 to 6   4 times (8 × 6)
+  · 7 to 8   8 times (4 × 3)
 
-  ・1・3・5・7 黒背景・白文字
-　・2・4・6・8 白背景・黒文字
+  · 1 · 3 · 5 · 7  black background · white character
+  · 2 · 4 · 6 · 8  white background · black character
 
-1.2.0 で公開された IchigoJam BIG と同じ表示は VIDEO 3 で可能です。
+The same display as IchigoJam BIG released at 1.2.0 is possible with VIDEO 3.
 
-画面サイズが変わる場合、画面クリアを行います。
-非表示・表示および反転動作、表示に変化がない場合は画面クリアを行いません。
+If the screen size changes, clear the screen.
+The screen is not cleared when there is no change in display / inversion and display, no change.
 
-LPC1114 動作の IchigoJam BASIC では VIDEO 5～8 で
-左右に震える表示になる場合があります。
-PRINT で連続出力させている場合、
-表示に変化がない時は PRINT させないようにすると軽減できます。
-また、IchigoJam BASIC RPi では発生しません。
+In IchigoJam BASIC of LPC 1114 operation, VIDEO 5 to 8
+It may become a display that can shake in the left and right.
+When continuous output is done with PRINT,
+When there is no change in the display, it can be reduced by not letting PRINT.
+Moreover, it does not occur in IchigoJam BASIC RPi.
 
-IchigoJam BASIC RPi では 1.2b17RPi・1.2.5RPi より対応しています。
-<表示> のみで <クロックダウン> は対応していません。
+IchigoJam BASIC RPi supports 1.2b17RPi and 1.2.5RPi.
+<display> only <clock down> does not correspond.
