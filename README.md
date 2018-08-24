@@ -1,9 +1,9 @@
 # IchigoJam-BASIC-english
 IchigoJam BASIC command list command reference (English) (https://ichigojam.github.io/RPi/) 
 
-This repo is an English translation of the Japanese text available from [IchigoJam-BASIC repo](https://github.com/fu-sen/IchigoJam-BASIC) by [fu-sen](https://github.com/fu-sen). It also replicates the http://ijprg.netlify.com/ access too, at http://prjij.netlify.com, used with MixJuice and the PanCake board. It should also work with IchigoLatte. I have also added the alias files (GSB.txt, RTN.txt) as well as replicating files for IF~THEN~ELSE and FOR~NEXT. I also have added seperate functions, statements and commands Quick Lists, and beginings of a constants text file as well.
+This repo is an English translation of the Japanese text available from [IchigoJam-BASIC repo](https://github.com/fu-sen/IchigoJam-BASIC) by [fu-sen](https://github.com/fu-sen) ([StrawberryJamRecipe](https://15jamrecipe.jimdo.com/)). It also replicates the http://ijprg.netlify.com/ access too, at http://prjij.netlify.com, used with MixJuice and the PanCake board. It should also work with IchigoLatte. I have also added the alias files (GSB.txt, RTN.txt) as well as replicating files for IF-THEN-ELSE and FOR-NEXT. I also have added seperate functions, statements and commands Quick Lists, and beginings of a constants text file as well.
 
-See [IchigoJam.md](./IchigoJam.md) for more info about the armv6 LPC1114FN28 project. The original README.md follows ...
+If you are a westerner, see [IchigoJam.md](./IchigoJam.md) for more info about the armv6 LPC1114FN28 project. The original README.md follows ...
 
 ## IchigoJam BASIC RPi Pinouts
 <img src="https://ichigojam.github.io/RPi/image/pin.png" alt="IchigoJam BASIC RPi Pinouts" title="IchigoJam BASIC RPi Pinouts">
@@ -51,7 +51,9 @@ Since IchigoJam PC has its own version notation, separately corresponding versio
 
 IchigoJam BIG is based on regular IchigoJam BASIC 1.2.0. IchigoJam BIG does not describe when the operation is different, If there is no description, it will be the same as normal IchigoJam. Equivalent display is supported by the `VIDEO` command from 1.2.2.
 
-IchigoJam website reflects the latest beta version. It can be confirmed with `VER()`. Ichigojam has an app distribution version running on Windows and macOS, linked on their site. These are common with IchigoJam BASIC, so we do not specifically consider it, There are restrictions such as incompatibility of input / output by PC operation, no body buttons, etc.
+IchigoJam website reflects the latest beta version. It can be confirmed with `VER()`. Ichigojam has an app distribution version running on Windows and MacOS X, linked on their site. These are common with IchigoJam BASIC, so we do not specifically consider it, There are restrictions such as incompatibility of input / output by PC operation, no body buttons, etc.
+
+IchigoJam Web is a Javascript library for webassembly.
 
 ## license
 
