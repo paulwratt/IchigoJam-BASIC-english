@@ -1,7 +1,7 @@
 # IchigoJam-BASIC-english
 IchigoJam BASIC command list command reference (English) (https://ichigojam.github.io/RPi/) (https://ichigojam.net/)
 
-This repo is an English translation of the Japanese text available from [IchigoJam-BASIC repo](https://github.com/fu-sen/IchigoJam-BASIC) by [fu-sen](https://github.com/fu-sen) ([StrawberryJamRecipe](https://15jamrecipe.jimdo.com/)). It also replicates the http://ijprg.netlify.com/ access too, at http://prjij.netlify.com, used with MixJuice and the PanCake board. It should also work with IchigoLatte. I have also added the alias files (GSB.txt, RTN.txt) as well as replicating files for IF-THEN-ELSE and FOR-NEXT. I also have added seperate functions, statements and commands Quick Lists, and beginings of a constants text file as well.
+This repo is an English translation of the Japanese text available from [IchigoJam-BASIC repo](https://github.com/fu-sen/IchigoJam-BASIC) by [fu-sen](https://github.com/fu-sen) ([StrawberryJamRecipe](https://15jamrecipe.jimdo.com/)). I have also added the alias files (GSB.txt, RTN.txt) as well as replicating files for IF-THEN-ELSE and FOR-NEXT. I also have added seperate functions, statements and commands Quick Lists, and beginings of a constants text file as well. I am in the process of making scripts to output the files for serving via MixJuice commands.
 
 If you are a westerner, see [IchigoJam.md](./IchigoJam.md) for more info about the armv6 LPC1114FN28 project. The original README.md follows ...
 
