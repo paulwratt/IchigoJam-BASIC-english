@@ -1,0 +1,266 @@
+IchigoJam BASIC version history
+
+2018/08/20 1.2b61 (1.2.4 release candidate version)
+· Added AZERTY array (IchigoJam fr).
+· Chinese Popopomo · Zhino Symbol (IchigoJam bp) was added.
+- Added IoT compatible firmware. (IoT.IN IoT.OUT addition, save 1 file only)
+· BPS -100 or less designation (For example, set to 230400 bps with BPS -2304)
+· Corresponds to I2C communication speed setting with BPS second parameter (IchigoJam BASIC RPi has been introduced in advance)
+· Change FILES 0, 0 to display only file 0
+- Speed ​​up (40% better than b54, 13% faster than 1.2.3)
+· No conversion to the same behavior as left Alt
+· Left Alt · Right Alt to the same behavior
+· Alt + W ~ Z equivalent to Alt + 0 ~ 3
+· Change error message suppression from OK 0 to OK 2
+· Changed to completely ignore command space
+Changed SOUND pin so that it can be used in machine language
+· Other bug fixes
+
+2018/04/13 IchigoJam BASIC 1.2b20RPi
+· Reflects 1.2 b 56 and 1.2 b 57 IoT
+The history is released separately (version history IchigoJam BASIC RPi.txt)
+
+
+2017/10/16 (2017/10/11) IchigoJam BASIC 1.2.0 RPi
+· Based on 1.2.3 to work with Raspberry Pi
+The history is released separately (version history IchigoJam BASIC RPi.txt)
+
+2017/08 / ?? 1.2.3
+· Bug fix (IchigoJam U auto start · INPUT using array)
+
+2017/05/30 1.2.2 (Including IchigoJam web by WebAssembly from here)
+· IchigoJam ap (Windows · macOS) Included
+· SWITCH addition F10 · Pause Break key assignment
+· I2C shorthand notation correspondence · adjustment
+· LIST 16384 up to normal display, 16385 and subsequent hidden lines to display with second parameter 0
+· Supports pull-up of OUT input
+· Automatic startup in SOUND pull-down is disabled, BTN is GND and automatic startup only
+· UART CR → LF conversion added
+· VIDEO 3 to 8 magnified display compatible
+· Supports ST7567 liquid crystal module output
+· Add deletion after cursor line to the head of F4 key LIST
+· F9 key Deletes newlines in FILES
+· F11 Add cursor line deletion or less
+· Addition of firmware for video output PAL area
+· Labels are added as a space separator symbol
+· When machine language is called In order to set division address to R3
+· Other bug fixes
+
+
+2016/06/14 1.2.1 (From 1.2.0)
+· Expansion of Romaji correspondence
+· Bug fix (keyboard operation)
+
+2016/05/30 IchigoJam BIG 1.2.0
+· Font size doubled, Coordinate halved
+
+2016/05/20 1.2.0 (updated)
+· Vietnamese version (IchigoJam vi) included
+· Mongolian version (IchigoJam mn) bundled
+※ Canada version is unchanged
+
+2016/04/19 1.2.0
+· Small LED version (IchigoJam pocket) included
+· Remove the Mongolian version
+· Update font
+· Compact LED version (IchigoJam pocket) supports VIDEO 0
+· Insert mode Change cursor shape
+· Copy compatible with COPY minus third parameter
+· INKEY () changed to return # 100 when receiving 0 from serial
+· Display LIST minus first line up to that line (LIST -100)
+· LIST Display the second and subsequent lines of the line with 0 (LIST 100, 0)
+· LIST When the second parameter is omitted, only that line is displayed (LIST 100)
+- Speed ​​up processing speed at VIDEO 1
+· Other bug fixes
+
+2016/04/06 IchigoJam pocket 1.2 beta 18
+· Compact liquid crystal AQM1248A compatible version
+※ This version has no video output version
+
+2016/04/04 1.2 beta 17 (From 1.2 beta 13)
+· Update font
+· Abolish vertical tab key (substitutable under cursor)
+
+2016/04/01 1.2 beta 14/2 th anniversary edition (2 th 2)
+· Add startup logo (file 0)
+· Partial font update
+· Automatically start file 0 by turning on the power without pressing the button (normally start up when pressing the button)
+· Jp keyboard · Japanese version released only
+※ 2nd anniversary special farm
+
+2016/03/27 1.2 beta 13
+· CLO · COPY · LEN · STR $ added
+· Supports substitution of character string ("" box, ASC · INPUT · LET · PLAY)
+· Label name correspondence
+· Added assignment of \ or \ with left Alt + [(_, left Alt +] (measures against US keyboard)
+· FOR 6 possible multiple loops
+· Expansion of GOSUB stack to 30 (10 in the past)
+· Change the pitch range to O1C ~ O5B, change the default octave to O3, change to the default octave to O3, change by <octave raised by> to change it by one octave lower (reversed function), fine tuning the pitch, MML length To eliminate restrictions
+· When PWM second parameter is set to negative value, it operates at 480 times
+· VIDEO 2 highlights video output in black and white
+· WAIT negative value corresponding to scan line weight, deep sweep correspondence
+· Automatic start up with pulldown of SOUND terminal
+· Clear screen with F1 key (OK disappeared)
+· Expand key buffer to 128 characters
+· Other bug fixes
+
+2016/01/09 - IchigoJam PC 0.1 beta 12 (initially IchigoJam for PC)
+· IchigoJam BASIC designed to operate on x86 CPU's PC based on 1.1
+The history is released separately (version history IchigoJam PC.txt)
+
+
+2015/12/21 - 1.1.1 (Including 1.0.2 beta 11 · 1.1.0 beta · 1.1 beta)
+· CONT · DEC $ · LANG · LINE · PWM · RESET · SRND · STOP · UART added
+· BPS -1 = 57600 bps · -2 = 38400 bps addition
+· FILES file number to specify range
+· GOSUB abbreviated GSB addition
+· RETURN abbreviation RTN addition
+· LED assignment to OUT 7 · IN (5) ~ IN (8) · IN (10) ~ IN (11) ANA (5) ~ (8) OUT 1, -1 to OUT 6, Assigned to
+· Supports PEEK # 100F (# 1000 · # 1001 program end code, # 1002 ~ # 100 F key status)
+· RENUM incremental support
+· Pass the start address of the virtual memory to the USR second parameter
+· VIDEO clock down added
+· BEEP generation at stop · Display of suspended lines
+· CHR $ (12) = Delete after cursor · CHR $ (19) = Page Up Add, add cursor by adding CHR $ (21, 32 + X coordinates, 32 + Y coordinates) Changing not to consider CHR $ (0) by cursor movement of CHR $ (28 to 31)
+· Language (Kana) added Ctrl + Shift to change
+· Shift + Right Alt → Ctrl + Alt Change Ins Switch
+· Hexadecimal number · reserved word After space changed by deciphering by space
+· Mongolian language correspondence (IchigoJam mn)
+· PS / 2 initialization command addition (corresponding keyboard expansion)
+· Other bug fixes (shift arithmetic → change to logical etc.)
+
+2015/08/24 - 1.0.2 beta 12
+· Interruption at RUN Interruption if Y coordinate is minus Y coordinate 0
+· Determine external crystal automatically
+· Other bug fixes
+* 1.0.2 beta 12 is updated again from 1.0.1 (not from 1.0.2 beta 11) 1.0.2 beta 11 successor is 1.1 beta
+
+2015/06 / 16 - 1.0.1 (including 1.0.0 (beta))
+· CLK · FILES · HELP · SOUND added
+· SCROLL UP · DOWN · LEFT · RIGHT compatible
+· BTN (<value>) correspondence
+· Pull down IN 1 · 2 · 4 → change pull up
+· ANA (<number>) correspondence
+· I 2 C → I 2 CR · I 2 CW change · To be interrupted with Esc key
+· TICK counts from 0 to 32767
+· To be able to use instead of = in FOR
+· Be sure to perform LRUN 0 after pressing SLEEP button · Without start screen
+· Add LRUN line number
+· Program saved number is 4 (0 to 3)
+· Reflect the space at the beginning of the program
+· LIST can be interrupted with Esc key
+· To 5 digits including VER beta number
+· Operator priority change (bit operator is high)
+· Change MML playback buffer
+· Two character blank output with TAB key
+· FILES with F9 key
+· Insert with Shift + Enter key
+· Change display at startup
+· BEEP sound generation at startup
+· Terms of service included
+· Other bug fixes
+
+2015/04/11 - 0.9.9 RC 12
+· I2C · FILE · BIN $ · · · · · · NOT added
+· SAVE · LOAD · Change to last access file when LRUN file is omitted · Number 227 correspondence
+· Delete reading size display at LRUN
+· Change display size of video screen to 32 × 24 characters
+· Supports binary notation with `XXXXXXXX
+· Change font of ~
+- Added kana switching code to CHR $ (15), insert mode switching code to CHR $ (17)
+· Home · End · Page Up · Page Down key correspondence
+· Other bug fixes
+
+2015/03/29 - 0.9.8 RC 12
+· FOR ~ NEXT · POKE · PEEK · CLP · HEX $ · USR added
+· Character addition, pseudo graphic correspondence
+· Changed CHR $ (92) \ → \ and change the alphanumeric input to \, move to CHR $ (160), input kana
+· Left ALT (+ Shift) + character input with alphanumeric characters
+· Support for hexadecimal notation with #XX
+· RENUM displays the line whose line number needs to be changed
+· Screen display position · Output adjustment
+· Other bug fixes
+
+2015/02/23 - 0.9.6 - 0.9.7
+· IF · Operator Bug Fix
+· Supports GOSUB variable
+· VIDEO 1 added to F8
+· SCROLL addition
+
+2015/02/22 - 0.9.4 - 0.9.5
+· AND · OR · ELSE · CLV · VIDEO · LET [n], m, l · CHR $ (n, m, ...) · VER addition
+· PS / 2 keyboard noise countermeasure
+· Initialization of variable at RUN discontinued
+• LOCATE 0, -1 indication None Serial output
+· Change F4 to LIST [Enter]
+· Add OUT 0 to F 7
+· Romaji lower case input x compatible
+· To alphabetical number by alphabetical number key
+· Support for GOTO variable
+· High speed processing
+
+2015/01/26 - 0.9.3
+· SAVE · LOAD · LRUN 100 ~ correspondence (EEPROM compatible)
+
+2015/01/11 - 0.9.1
+· Bug fix for OUT 6
+· Speed ​​correction of PLAY · TEMPO
+
+2015/01/04 - 0.9.0
+· PLAY · TEMPO · BEEP · SCR · OUT 5/6 (former EX 3/4) added
+· Cursor position retrieval without VPEEK argument
+
+2014/12/08 - 0.8.9
+· LIST Line number up to line number
+· F4 LIST No line break
+· LC addition
+· INPUT bug fix after LOCATE
+· FREE () addition (F6 assignment)
+· Input array bug fixed
+· US keyboard compatible
+
+2014/10/04 - 0.8.7x
+· External Crystal compatible version included
+
+2014/09/15 - 0.8.6 - 0.8.7
+· Change program area to 1 KB
+· Program suspended OUT 0
+· ABS · ASC · IN (n) · OUT n, m Addition
+
+2014/08/01 - 0.8.4
+· Add ANA
+
+2014/07/27 - 0.8.3
+Add
+· Countermeasures against garbled characters when booting using a USB keyboard
+
+2014/06/21 - 0.8.2
+· Right ALT key correspondence for Kana change
+
+2014/06/15 - 0.8.1
+· Change from TIME to TICK
+· Kana switching with application key (menu key)
+
+2014/06/14 - 0.8.0
+· Can correspond to kana input
+· TIME · CLT addition
+· SAVE · LOAD · LRUN program number 0 to 2 correspondence
+
+2014/06/06 - 0.7.7
+· BPS addition
+· Change to lighting other than LED 0
+
+2014/06/01 - 0.7.6
+· LET syntax change
+· Add sequence
+
+2014/05/18 - 0.7.4 - 0.7.5
+· Font change
+· CHR $ addition
+
+2014/05/11 - 0.7.3
+· Fixed a bug where OUT became LED 0
+· Changed not to LRUN when turning on the power without pressing the button
+
+2014/05/06 - 0.7 to 0.7.2
+· Add LRUN, bit operator with power on when pressing button

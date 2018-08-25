@@ -1,0 +1,53 @@
+IchigoJam PC version history
+
+2016/01/09 IchigoJam 0.1 PC beta 12
+· Modification of FILE ()
+· Adjust key repeat speed
+
+2016/01/04 IchigoJam PC 0.1 beta 11
+· BEEP PLAY compatible!
+· Lower power consumption
+
+2016/01/04 IchigoJam PC 0.1 beta 10
+· Change to UART 0,0 at startup (serial invalid)
+· -Notimer Included (Countermeasures against problems not activated by VMware etc.)
+
+2016/01/03 IchigoJam PC 0.1 beta 9
+· Romaji Kana correspondence
+· Emoticon support (left ALT)
+· LED changed to Caps Lock LED
+
+2016/01/03 IchigoJam PC 0.1 beta 8
+· Fixed problem (serial port)
+
+2016/01/03 IchigoJam for PC 0.1 beta 7
+- Configuration file for VirtualBox Included
+· Serial port compatible
+·Bug fixes
+
+2016/01/02 IchigoJam for PC 0.1 beta 6
+· INPUT compatible
+· CLT compatible
+· Bundled iso file
+Change the lighting of the LED to the Scroll Lock LED
+
+2016/01/02 IchigoJam for PC 0.1 beta 5
+· LED compatible
+· PCG compatible
+· SAVE · LOAD 0 to 3 correspondence (It disappears when the power is off, it does not disappear with RESET)
+
+2016/01/01 IchigoJam for PC 0.1 beta 4
+· Support for WAIT command
+· As the cursor blinks
+· Change screen drawing to once every 1 / 60th of a second
+
+2016/01/01 IchigoJam for PC 0.1 beta 3
+· Reduced startup time
+· Fix defect (function key)
+
+2016/01/01 IchigoJam for PC 0.1 beta 2
+· Cursor movement supported
+· Some functions key
+
+2016/01/01 IchigoJam for PC 0,1 beta 1 (From IchigoJam BASIC 1.1)
+· First publication release

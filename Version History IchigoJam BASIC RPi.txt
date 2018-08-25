@@ -1,0 +1,73 @@
+IchigoJam BASIC RPi version history
+
+※ The date is as follows
+· () [] None Facebook Group IchigoJam-FAN posting date
+         https://www.facebook.com/groups/ichigojam/search/?query=IchigoJam%20BASIC%20RPi
+· () Publish date by GitHub update
+         https://github.com/IchigoJam/RPi
+· [] I-O DATA release date
+         http://www.iodata.jp/lib/product/u/5813_etc.htm
+Some dare not arrange in order by date
+
+(2018/06/08) IchigoJam BASIC 1.2.6 RPi
+· Fixed problem (Raspberry Pi 3 Model B + LED operation)
+
+(2018/06/01) IchigoJam BASIC 1.2.5 RPi
+· Formal version 1.2b22 RPi
+
+2018/05/31 IchigoJam BASIC 1.2b22RPi
+· IOT.IN IOT.OUT is adjusted to the specification of 1.2b 57 IoT
+
+2018/05/25 IchigoJam BASIC 1.2b21 RPi
+· IOT.IN IOT.OUT added
+· Raspberry Pi 3 Model B + compatible
+· Fixed problem (freeze with OUT 7, x)
+
+2018/04/13 IchigoJam BASIC 1.2b20RPi
+· Change to FILES 20 (file number 0 ~ 20 is displayed) without FILES value
+· Reflected 1.2b56 (excluding SOUND pin machine language use)
+· Right Alt + K of Kana input switching is abolished
+
+2018/02/02 IchigoJam BASIC 1.2b19RPi
+· I2C communication speed setting supported by BPS second argument
+· I2C communication speed setting by i2c_clock.txt is abolished
+
+2018/02/01 IchigoJam BASIC 1.2b18RPi
+· BEEP · PLAY · SOUND · TEMPO compatible
+· Save to SD card keymap.txt with KBD command
+
+2018/01/19 IchigoJam BASIC 1.2 b 17 RPi
+· VIDEO compatible
+· Font antialiasing disabled setting supported (scaling_kernel = 8 added to config.txt)
+
+2018/01/12 IchigoJam BASIC 1.2b16RPi
+· USR compliant
+· SAVE · LOAD · FILES compatible with EEPROM, SD card program number change
+· I2C default communication speed changed to 400 kHz
+· Supports I2C communication speed setting (i2c_clock.txt)
+
+(2017/12/25) IchigoJam BASIC 1.2.4 RPi
+· 1.2b15 Formal version of RPi
+
+2017/12/07 IchigoJam BASIC 1.2b15RPi
+· Blinking cursor
+· Acceleration of screen line drawing
+
+(2017/12/9) IchigoJam BASIC 1.2.3 RPi
+· Formal version 1.2b14 RPi
+
+2017/11/29 IchigoJam BASIC 1.2b14RPi
+· Improvement of problem that change of screen of CLS · SCROLL · POKE · COPY · CLP is not reflected to PRINT
+
+[2017/12/17] IchigoJam BASIC + 1.2.2 RPi
+· Improvement of some keyboard with Home key · Home · End · Page Up · Page Down · Ins not working
+· Improvement of problem that Shift · Ctrl · Alt does not work on some keyboards
+· Improve the problem that auto repeat does not work with some keyboard
+* On the site of I-O DATA, only "Auto repeat correspondence" is stated
+※ Free version IchigoJam BASIC 1.2.2 RPi is not published on the site
+
+[2017/11/22 to 2017/12 / late] IchigoJam BASIC + 1.2.0 RPi
+· IchigoJam BASIC + first edition released
+
+2017/10/16 (2017/10/11) IchigoJam BASIC 1.2.0 RPi
+· First edition formal release
