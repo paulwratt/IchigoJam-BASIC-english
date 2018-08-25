@@ -1,0 +1,44 @@
+functions
+IchigoJam BASIC
+IchigoJam BASIC RPi ★ not supported
+IchigoJam PC ※ not compatible
+-----------------------------------------------------------
+[Function]
+Quick list of Functions.
+
+[Command format]
+ABS(<value>) - return absolute value
+ANA([<value>]) - return the voltages of IN2 and BTN
+ASC("<character>") - character code
+ASC(<variable>) - character code
+BTN([<value>]) - UP DOWN LEFT RIGHT SPACE 0
+BIN$(<value> [, <number of digits>]) - binary string
+CHR$(<character code>) - one character
+CHR$(<character code>, <character code>, ...) - string
+DEC$(<value> [, <number of digits>]) - decimal string
+FILE() - last accessed file number
+FREE() - amount of free memory
+HEX$(<value> [, <number of digits>]) - hexidecimal string
+I2CR(<I2C address>, [<command start address>, <command 
+      length>,> <read memory starting address>, <read 
+      memory length>) - read from I2C device ※
+I2CW(<I2C address>, [<command start address>, <command 
+       length>,] <write memory start address>, <write 
+       memory length>) - write to I2C device ※
+IN([<terminal>]) - input from terminal
+INKEY() - character of key being pressed
+IoT.IN() - receive data from sakura.io module ※
+LANG() - returns the language type
+LEN(<start address>) - length of the string
+LINE() - line number being executed
+PEEK(<number>) - memory peek
+RND(<number>) - generate a random number, see SRND n
+SCR([<x-axis>, <y-axis>]) - screen, alias for VPEEK
+SOUND() - presence or absence of sound output
+STR$(<start address> [, <length>]) - return a string
+TICK() - ticks since last reset
+USR(<address>, <value>) - execute machine code ※
+VER() - get version number
+VPEEK([<x-axis>, <y-axis>]) - video peek, empty=cursor
+
+[Commentary]

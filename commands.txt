@@ -1,0 +1,57 @@
+commands
+IchigoJam BASIC
+IchigoJam BASIC RPi ★ not supported
+IchigoJam PC ※ not compatible
+-----------------------------------------------------------
+[Function]
+Commands most used outside a program.
+
+[Command format]
+?ANA([<value>]) - print the voltages of IN2 and BTN
+?ASC("<character>") - print character code
+BEEP [<period>, <length>] - tone generator
+?BIN$(<value> [, <number of digits>]) - print binary
+BPS [<communication speed>] [, <I2C communication speed>]
+?BTN(0) - print button key (if it exists) being pressed
+?CHR$(<character code>) - print character
+CLV     - clear keyboard buffer and key state
+CLO     - clear input / output state
+CLP     - clear PCG font changes
+CLS     - clear visible screen area
+CLT     - clear TICK() timer
+CLV     - clear variables
+CONT    - continue program execution
+COPY <destination>, <source>, <length> - memcopy
+?DEC$(<value> [, <number of digits>]) - print decimal
+?FILE() - print last accessed file number
+FILES   - list files
+FILES [<Maximum number of files>]
+?FREE() - print amount of free memory
+GOTO <line> - continue program execution at <line>
+HELP    - print memory map
+?HEX$(<value> [, <number of digits>]) - print hexidecimal
+LET <variable> = <value> - assign variable
+LIST [[<start line>,] <end line>] - program
+LOAD    - load 0 or last program, clear variables
+LOCATE <x-axis>, <y-axis> - set position of cursor
+LOCATE <x-axis>, -1 - set position of serial cursor
+LRUN    - load and run 0 or last program
+LRUN [<program number>] [, <line number>]
+NEW     - erase the program in memory, clear variables
+OUT [<terminal>,] <value> - output to the OUT terminal
+PLAY <start address> - play <MML> in memory or variable
+POKE <address>, <value> [, <value>] [, ...] - memory ※
+PRINT "<character string> ["] [;] - to screen or serial
+RENUM [<start line number>] [, <increment>] - program
+RESET   - soft reset
+RETURN  - return from last GOSUB and execute program
+RUN     - start program execution at 1st line
+SAVE    - save or delete 0 or last program
+SLEEP   - pause program execution, button start ★
+SRND 0  - reset random number generator seed
+SWITCH  - toggle video/LCD
+?TICK() - print ticks since last reset
+VIDEO 0 - turn video output off
+VIDEO 1 - turn video output on
+
+[Commentary]

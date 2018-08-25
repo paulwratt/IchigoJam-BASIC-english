@@ -1,0 +1,65 @@
+statements
+IchigoJam BASIC
+IchigoJam BASIC RPi ★ not supported
+IchigoJam PC ※ not compatible
+-----------------------------------------------------------
+[Function]
+Quick list of Statements.
+
+[Command format]
+'<comment> - short form REMark
+BEEP [<period>, <length>] - tone generator
+BPS [<communication speed>] [, <I2C communication speed>]
+CLEAR   - clear variables, alias CLV
+CLV     - clear keyboard buffer and key state
+CLO     - clear input / output state
+CLP     - clear PCG font changes
+CLS     - clear visible screen area
+CLT     - clear TICK() timer
+CLV     - clear variables
+COPY <destination>, <source>, <length> - memcopy
+ELSE - optional in IF~THEN~ELSE
+END - end program execution
+FILES [[<start file number>,] <end file number>] - list
+FILES [<Maximum number of files>]
+FOR <variable>=<number> TO <number> [STEP <step>] - NEXT
+GOTO <line> - jump to <line>
+GOSUB <line> - branch to subroutine at <line>
+GSB <line> - gosub, alias for GOSUB
+IF (eval) THEN (true) ELSE (false)
+INPUT ["<string>",] <variable> - user input
+IoT.OUT <value> - send data to sakura.io module ※
+KBD <keyboard array> - only on RPi
+LC - alias for LOCATE
+LED <number> - same as OUT7, turn on / off the lamp
+LET <variable> = <value> - assign variable
+LET [<array>], <number>, number, ... - number array
+LET [<array>], "<string>", "<string>", ... - string array
+LOAD [<program number>] - load n, 0 or last program
+LOCATE <x-axis>, <y-axis> - set position of cursor
+LOCATE <x-axis>, -1 - set position of serial cursor
+LRUN [<program number>] [, <line number>]
+NEXT - end for FOR~NEXT loop
+OUT [<terminal>,] <value> - output to the OUT terminal
+PLAY "<MML>" - Music Macro Language
+PLAY <start address> - play <MML> in memory or variable
+POKE <address>, <value> [, <value>] [, ...] - memory ※
+PRINT "<character string> ["] [;] - to screen or serial
+PWM <terminal>, <pulse width> [, <pulse period>] ※
+REM <comment> - program line comment
+RESET - soft reset
+RETURN - return from last GOSUB
+RTN - return, alias RETURN
+SAVE [<program number>] - save the program
+SCROLL <direction> - scroll screen
+SLEEP - pause program execution, button start ★
+SRND <value> - seed random number generator
+STOP - stop program execution
+SWITCH [<mode>] - switch video/LCD ★※
+TEMPO <tempo> - T of PLAY in <MML>
+THEN - optional in IF~THEN~ELSE, can be GOTO
+UART <mode 1> [, <mode 2>] - serial output mode
+VIDEO <display> [, <clock down>] - change video
+WAIT <time> [, <dive>] - seconds or scanlines (-time)
+
+[Commentary]
