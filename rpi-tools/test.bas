@@ -1,0 +1,21 @@
+1 ' Dump Memory
+5 CLV:CLS
+6 A=0:'<= start address
+10 LC 0,0
+11 FOR J=0 TO 20
+20 C="":?HEX$(A,4);:?" ";
+22 FOR I=0 TO 7
+30 B=PEEK(A+I)
+40 ?HEX$(B,2);:'?" ";
+42 NEXT
+50 ?" ";
+52 FOR I=0 TO 7
+60 B=PEEK(A+I)
+70 IF B<32 THEN ?"."; ELSE ?CHR$(B);
+80 IF B>0 AND B<8 THEN ?CHR$(8,B);
+90 IF B=22 THEN ?CHR$(8,B);
+100 IF B>24 AND B<28 THEN ?CHR$(8,B);
+110 '?CHR$(B);
+112 NEXT
+120 A=A+8:?
+121 NEXT
