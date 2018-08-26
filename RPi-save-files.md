@@ -4,22 +4,33 @@ In the `rpi-tools` folder there are some utilities to access, load and save `*.b
 You can get an armv7 binary or compile an uptodate version of BAS fom either [my standard repo](https://github.com/paulwratt/bas-2.5-plus) or [my enhanced repo](https://github.com/paulwratt/bas-2.5-pw). The enhanced `BAS-2.5-pw` supports some other things like 256 colors (with `$TERM` set to `xterm-256color` or `fbterm`).  
 
 # Save File Format
-You can you the following info to rewrite the `rpi-tools` in another language, like Python, or as a shell script (if you are confident)
+You can you the following info to rewrite the `rpi-tools` in another language, like Python, or as a shell script (if you are confident).
 
 Each _.bin_ file is a zero padded file of 1024 length, with no header information.
 
-Each file starts with the first line number of the BASIC listing. It is a 16 bit little endian number, written in reverse as two 8 bit bytes. I always use `1` so `hexdump -C _n_.bin` will show `01 00`.
+Each file starts with the first line number of the BASIC listing. It is a 16 bit little endian number (ie written in reverse as two 8 bit bytes). I always start my programs with line number `1` so `hexdump -C _n_.bin` will show `01 00`.
 
-The next 8 bit byte is and _EVEN_ number between 2 and 254, which represents the number of characters till the end of the line. If the _actual_ line length is _ODD_, there wil be extra padding, so hex '00 00', other wise  the last character will be hex `00`.
+The next 8 bit byte is and _EVEN_ number between 2 and 254, which represents the number of characters till the end of the line, where a hex `00` is. If the _actual_ line length is _ODD_, there wil be extra padding, so hex `00 00`, otherwise the last character will be hex `00`, before the next line number.
 
 This line length is because the ARM CPU will read in 16 bit values, so when it reads the line lenght it also already has the first letter of that line, and since each line is _0 terminated_ it will need 2 for odd numbered lines.
 
-The first "line" is the one printed in a `FILES` command. The next line repeats the same format, unless the line number is equal to `0`. IchigoJam is not case sensitive, and does not validate line contents until execution time.
+The first "line" is the one printed in a `FILES` command. The next line repeats the same format, unless the line number is equal to `0`. IchigoJam BASIC is not case sensitive, and does not validate line contents until execution time.
+
+I have tried to keep the command format as close to IchigoJam BASIC as possible. `ij_save` will ignore lines that dont start with a number If the save file does not exist then it is created. If for some reason your save file ends up being larger than 1024 bytes, delete it first before creating it again. `ij_file` requires the `nkf` package, it converts a text file to _Shift-JIS_, the format of chracater codes used by IchigoJam BASIC.
+
+If the source text file only contains ASCII characters thess than 127 (english), it does not need to be converted first. I am not sure about Phonetic Chinese, Mongolian or French, which are only available via Firmware upgrades on IchogoJam (please let me know), but it will follow the same rules (with special characters needing to be remapped).
+
+```
+./ij_files.bas [<path> [<save number> [<last save number>]]]
+./ij_list.bas <save number> [> <text file name>]
+./ij_save.bas <save number> <source text file>
+./ij_file.sh <in text file> <out text file>
+```
 
 
 # Example save file
 ```
-#/IchigoJam-BASIC-english/pri-tools> hexdump -C 4.bin
+/IchigoJam-BASIC-english/rpi-tools> hexdump -C 4.bin
 00000000  01 00 0e 27 20 44 75 6d  70 20 4d 65 6d 6f 72 79  |...' Dump Memory|
 00000010  00 00 05 00 08 43 4c 56  3a 43 4c 53 00 00 06 00  |.....CLV:CLS....|
 00000020  16 41 3d 30 3a 27 3c 3d  20 73 74 61 72 74 20 61  |.A=0:'<= start a|
