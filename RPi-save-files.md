@@ -1,9 +1,9 @@
-* IchigoJam BASIC RPi Save Files
+# IchigoJam BASIC RPi Save Files
 In the `rpi-tools` folder there are some utilities to access, load and save `*.bin` files. They are written for BAS by Michel Haardt (of _cpmtools_ fame), and ANSI BASIC interpreter.  
 
 You can get an armv7 binary or compile an uptodate version of BAS fom either [my standard repo](https://github.com/paulwratt/bas-2.5-plus) or [my enhanced repo](https://github.com/paulwratt/bas-2.5-pw). The enhanced `BAS-2.5-pw` supports some other things like 256 colors (with `$TERM` set to `xterm-256color` or `fbterm`).  
 
-* Save File Format
+# Save File Format
 You can you the following info to rewrite the `rpi-tools` in another language, like Python, or as a shell script (if you are confident)
 
 Each _.bin_ file is a zero padded file of 1024 length, with no header information.
@@ -17,7 +17,7 @@ This line length is because the ARM CPU will read in 16 bit values, so when it r
 The first "line" is the one printed in a `FILES` command. The next line repeats the same format, unless the line number is equal to `0`. IchigoJam is not case sensitive, and does not validate line contents until execution time.
 
 
-** Example save file
+# Example save file
 ```
 #/IchigoJam-BASIC-english/pri-tools> hexdump -C 4.bin
 00000000  01 00 0e 27 20 44 75 6d  70 20 4d 65 6d 6f 72 79  |...' Dump Memory|
