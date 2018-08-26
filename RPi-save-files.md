@@ -5,7 +5,7 @@ In the `rpi-tools` folder there are some utilities to access, load and save `*.b
 You can get an armv7 binary or compile an uptodate version of BAS fom either [my standard repo](https://github.com/paulwratt/bas-2.5-plus) or [my enhanced repo](https://github.com/paulwratt/bas-2.5-pw). The enhanced `BAS-2.5-pw` supports some other things like 256 colors (with `$TERM` set to `xterm-256color` or `fbterm`).  
 
 
-# Save File Tools
+# RPi Save File Tools
 
 You can you the following info to rewrite the `rpi-tools` in another language, like Python, or as a shell script (if you are confident).
 
@@ -21,7 +21,7 @@ If the source text file only contains ASCII characters thess than 127 (english),
 ```
 
 
-# Save File Format
+# RPi Save File Format
 
 Each _.bin_ file is a zero padded file of 1024 length, with no header information.
 
@@ -34,7 +34,7 @@ This line length is because the ARM CPU will read in 16 bit values, so when it r
 The first "line" is the one printed in a `FILES` command. The next line repeats the same format, unless the line number is equal to `0`. IchigoJam BASIC is not case sensitive, and does not validate line contents until execution time.
 
 
-# Example save file
+# Example RPi Save File
 ```
 /IchigoJam-BASIC-english/rpi-tools> hexdump -C 4.bin
 00000000  01 00 0e 27 20 44 75 6d  70 20 4d 65 6d 6f 72 79  |...' Dump Memory|
@@ -66,4 +66,4 @@ The first "line" is the one printed in a `FILES` command. The next line repeats 
 *
 00000400
 ```
-The last line `00000400` is the hexidecimal value for `1024`.
+The last line `00000400` is the hexidecimal value for the file legnth `1024`.
