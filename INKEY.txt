@@ -16,7 +16,7 @@ PRINT INKEY()
 Returns the character code of the keyboard being pressed.
 If it is not pressed, 0 is returned.
 
-1.2 If beta 19 gets CHR$(0) from serial,
+After 1.2 beta 19, If gets CHR$(0) from serial,
 It returns 256 (#100).
 
 In other models, the return value as INKEY$ returns the character itself,
