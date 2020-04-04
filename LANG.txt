@@ -16,7 +16,7 @@ PRINT LANG()
 [Commentary]
 The values ​​to return are as follows.
 
-    1 Katakana and Romaji input
+    1 Japanese Katakana and Romaji input
     2 Cyrillic letter with Mongolian arrangement (IchigoJam mn)
     3 Vietnamese (IchigoJam vi)
     4 AZERTY sequence (IchigoJam fr)
