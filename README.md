@@ -1,7 +1,7 @@
 # IchigoJam-BASIC-english
 IchigoJam BASIC command list command reference (English) (https://ichigojam.github.io/RPi/) (https://ichigojam.net/)
 
-This repo is an English translation of the Japanese text available from [IchigoJam-BASIC repo](https://github.com/fu-sen/IchigoJam-BASIC) by [fu-sen](https://github.com/fu-sen) ([StrawberryJamRecipe](https://15jamrecipe.jimdo.com/)). I have also added the alias files (GSB.txt, RTN.txt) as well as replicating files for IF-THEN-ELSE and FOR-NEXT. I also have added seperate functions, statements and commands Quick Lists, and beginings of a constants text file as well. I am in the process of making scripts to output the files for serving via MixJuice commands.
+This repo is an English translation of the Japanese text available from [IchigoJam-BASIC repo](https://github.com/fu-sen/IchigoJam-BASIC) by [fu-sen](https://github.com/fu-sen) ([IchigoJamRecipe](https://15jamrecipe.jimdo.com/)). I have also added the alias files (GSB.txt, RTN.txt) as well as replicating files for IF-THEN-ELSE and FOR-NEXT. I also have added seperate functions, statements and commands Quick Lists, and beginings of a constants text file as well. I am in the process of making scripts to output the files for serving via MixJuice commands.
 
 If you are a westerner, see [IchigoJam.md](./IchigoJam.md) for more info about the armv6 LPC1114FN28 project. The original README.md follows ...
 
@@ -21,7 +21,7 @@ You can download the file list as a ZIP. If you are using GitHub / Git, you may 
 When referring with RAW, when downloading a file again, The .txt file will be UTF-8 character code, CR + LF linefeed code (I changed the character code from May 14, 2016). On Windows it is possible to use Notepad.
 
 * IchigoJam (Official) https://ichigojam.net/
-* Strawberry Jam Recipe (Publisher) https://15jamrecipe.jimdo.com/
+* IchigoJam Recipe (Publisher) https://15jamrecipe.jimdo.com/
 
 ## PDF version
 
@@ -45,9 +45,9 @@ Corresponding version is listed under upper command name. In particular, "Ichigo
 
 1.1 beta (including 1.1.0 beta 1) inherits additional functions up to 1.0.2 beta 11. Therefore, some commands in 1.1 beta notation will work with 1.0.2 beta 11. (... → 1.0.2 beta 11 → 1.1.0 beta 1 → 1.1 beta 2 → 1.1 beta 3 → ... ). ".0" has been removed as a result of having published the Mongolian version with 1.1 beta 2) 1.0.2 Since beta12 is inheriting from 1.0.1 again, please note the difference in behavior (1.0.2 beta 12 has a function that does not include part of contents up to beta 11). However, in fact 1.0.2 is not officially released, 1.1.1 is officially released.
 
-IchigoJam BASIC RPi has operation depending on the difference between version and hardware specification, Separately supported version is indicated at the top. The official version version notation of IchigoJam BASIC RPi is different from the original version of IchigoJam BASIC. IchigoJam BASIC 1.2.0 RPi ~ 1.2.4 RPI is based on IchigoJam BASIC 1.2.3. Please note that IchigoJam BASIC 1.2.5 RPi ~ 1.2.6 RPi is equivalent to IchigoJam BASIC 1.2b 56 ~ 1.2b 57 IoT.
+IchigoJam BASIC RPi has operation depending on the difference between version and hardware specification, Separately supported version is indicated at the top. The official version version notation of IchigoJam BASIC RPi is different from the original version of IchigoJam BASIC. IchigoJam BASIC 1.2.0RPi-1.2.4RPi is based on IchigoJam BASIC 1.2.3. Please note that IchigoJam BASIC 1.2.5RPi-1.2.6 RPi is equivalent to IchigoJam BASIC 1.2b56-1.2b57 IoT.
 
-Since IchigoJam PC has its own version notation, separately corresponding version is indicated on the top. IchigoJam PC 0.1 beta 1 ~ 0.1 beta 12 is based on IchigoJam BASIC 1.1, Basically we inherit the specification of 1.1.
+Since IchigoJam PC has its own version notation, separately corresponding version is indicated on the top. IchigoJam PC 0.1 beta 1-0.1 beta 12 is based on IchigoJam BASIC 1.1, Basically we inherit the specification of 1.1.
 
 IchigoJam BIG is based on regular IchigoJam BASIC 1.2.0. IchigoJam BIG does not describe when the operation is different, If there is no description, it will be the same as normal IchigoJam. Equivalent display is supported by the `VIDEO` command from 1.2.2.
 
@@ -79,7 +79,7 @@ https://www.facebook.com/groups/ichigojam/
 Facebook group IchigoJam - FAN @ en (English)  
 https://www.facebook.com/groups/ichigojamfan/  
 
-Maded by Keiichi Shiga (Fu-sen.) | Keiichi SHIGA (BALLOON aka Fu-sen.), 2015-2018.
+Maded by Keiichi SHIGA (BALLOON aka Fu-sen.), 2015-2018.
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License style="border-width:0" src="https://licensebuttons.net/l/by/4.0/88x31.png" /></a>
 
